@@ -10,9 +10,13 @@ function build() {
   document.body.append(wipe);
 }
 
+function kill() {
+  document.querySelectorAll(".wipe").forEach((el) => el.remove());
+  wipe = null;
+}
+
 export function init() {
   if (calm) return;
-  build();
 
   document.addEventListener("click", (e) => {
     const a = e.target.closest("a");
@@ -27,11 +31,11 @@ export function init() {
     setTimeout(() => (location.href = href), 460);
   });
 
-  addEventListener("pageshow", (e) => {
-    if (e.persisted) return;
-    wipe.classList.remove("play");
-    void wipe.offsetWidth;
-    wipe.classList.add("open");
-    setTimeout(() => wipe.classList.remove("open"), 900);
+  // после любого показа страницы — свежая загрузка или восстановление
+  // из bfcache кнопкой «назад» — сносим все полосы перехода, иначе
+  // они остаются растянутыми поверх контента (белый экран)
+  addEventListener("pageshow", kill);
+  addEventListener("visibilitychange", () => {
+    if (!document.hidden) kill();
   });
 }

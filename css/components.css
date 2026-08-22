@@ -327,7 +327,7 @@
   min-height: 240px;
   border: 1px solid var(--line);
   border-radius: 16px 16px 4px 4px;
-  background: linear-gradient(180deg, var(--bg-2) 0%, rgba(15, 17, 21, 0.4) 100%);
+  background: linear-gradient(180deg, #fffdf8 0%, #f7f2e7 100%);
   overflow: hidden;
   transition: border-color var(--f3) var(--e-out), box-shadow var(--f3) var(--e-out);
 }
@@ -411,7 +411,7 @@
   flex-direction: column;
   border: 1px solid var(--line);
   border-radius: 16px 16px 4px 4px;
-  background: linear-gradient(180deg, var(--bg-2) 0%, rgba(15, 17, 21, 0.6) 100%);
+  background: linear-gradient(180deg, #fffdf8 0%, #f7f2e7 100%);
   overflow: hidden;
   transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transition: border-color var(--f3) var(--e-out), box-shadow var(--f3) var(--e-out),
@@ -490,15 +490,15 @@
   place-items: center;
   padding: 20px;
   background:
-    radial-gradient(rgba(33, 29, 22, 0.05) 1px, transparent 1px) 0 0 / 16px 16px,
-    linear-gradient(180deg, #fdfbf4 0%, #f3edde 100%);
+    radial-gradient(rgba(33, 29, 22, 0.04) 1px, transparent 1px) 0 0 / 16px 16px,
+    linear-gradient(180deg, #ffffff 0%, #f7f2e8 100%);
 }
 
 .thumb img {
   max-height: 100%;
   object-fit: contain;
-  -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 38%, transparent 74%);
-  mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 38%, transparent 74%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 72% at 50% 50%, #000 26%, transparent 60%);
+  mask-image: radial-gradient(ellipse 80% 72% at 50% 50%, #000 26%, transparent 60%);
   mix-blend-mode: multiply;
   transform: translateZ(20px);
   transition: transform var(--f3) var(--e-back);
@@ -859,8 +859,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 40%, transparent 76%);
-  mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 40%, transparent 76%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 72% at 50% 50%, #000 28%, transparent 58%);
+  mask-image: radial-gradient(ellipse 80% 72% at 50% 50%, #000 28%, transparent 58%);
   mix-blend-mode: multiply;
 }
 
@@ -1233,8 +1233,8 @@ input[type="range"]::-moz-range-thumb {
   position: relative;
   max-height: 380px;
   object-fit: contain;
-  -webkit-mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 42%, transparent 78%);
-  mask-image: radial-gradient(ellipse 88% 82% at 50% 50%, #000 42%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 82% 74% at 50% 50%, #000 30%, transparent 62%);
+  mask-image: radial-gradient(ellipse 82% 74% at 50% 50%, #000 30%, transparent 62%);
   mix-blend-mode: multiply;
   animation: float 4s ease-in-out infinite;
   filter: drop-shadow(0 18px 36px rgba(33, 29, 22, 0.14));
