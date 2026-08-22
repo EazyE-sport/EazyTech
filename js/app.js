@@ -51,6 +51,10 @@ settingsModal.innerHTML = `
       ${CURRENCIES.map((c) =>
         `<button class="chip${getCur() === c.id ? " on" : ""}" data-cur="${c.id}">${c.sym} ${c.label}</button>`).join("")}
     </div>
+    <div class="s-donat">
+      <p>Подобається проєкт? Підтримай автора — каталог живе без реклами і трекерів.</p>
+      <a class="btn btn--acc" href="https://donatello.to/MainStreet" target="_blank" rel="noopener">Підтримати на Donatello ❤</a>
+    </div>
     <button class="btn btn--ghost" data-close>Закрыть</button>
   </div>`;
 document.body.append(settingsModal);

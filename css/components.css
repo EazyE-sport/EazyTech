@@ -2214,3 +2214,19 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   gap: 10px;
 }
+
+/* поддержка автора в настройках */
+
+.s-donat {
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+  margin: 18px 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.s-donat p {
+  font-size: 13px;
+  color: var(--txt-2);
+}
