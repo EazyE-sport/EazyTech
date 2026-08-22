@@ -372,6 +372,10 @@ function paint() {
   page = Math.min(Math.max(1, page), pages);
   const slice = visible.slice((page - 1) * ps, page * ps);
 
+  // живая обратная связь: счётчик в фильтрах и на кнопке «применить»
+  document.querySelectorAll("[data-num]").forEach((el) => (el.textContent = visible.length));
+  document.querySelectorAll("[data-apply-n]").forEach((el) => (el.textContent = visible.length));
+
   grid.querySelectorAll(".card").forEach((c, i) => {
     c.style.setProperty("--i", i % 2 ? "-1" : "1");
     c.classList.add("out");
@@ -488,7 +492,8 @@ function buildFilters(box) {
       </div>
     </div>
     <p class="f-count">Показано <b data-num>${catData.length}</b> из ${catData.length}</p>
-    <button class="btn btn--ghost" data-reset>Сброс</button>`;
+    <button class="btn btn--ghost" data-reset>Сброс</button>
+    <button class="btn btn--acc f-apply" data-apply>Показать <b data-apply-n>${catData.length}</b></button>`;
 
   bindGroup(box);
 }
@@ -536,6 +541,18 @@ function bindGroup(box) {
     box.querySelectorAll("input[type='checkbox']").forEach((cb) => (cb.checked = false));
     paint();
   });
+
+  // кнопка «применить»: перерисовать и закрыть мобильный шторок фильтров
+  const applyBtn = box.querySelector("[data-apply]");
+  if (applyBtn) {
+    applyBtn.addEventListener("click", () => {
+      paint();
+      $("#sheet")?.classList.remove("open");
+      $("#sheetBg")?.classList.remove("open");
+      document.body.style.overflow = "";
+      $("#grid")?.scrollIntoView({ behavior: CALM ? "auto" : "smooth", block: "start" });
+    });
+  }
 }
 
 /* ============ устройство ============ */
