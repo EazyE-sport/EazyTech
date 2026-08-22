@@ -1,0 +1,95 @@
+{
+  "id": "aula-win-68-he-max",
+  "name": "AULA WIN 68 HE MAX Black Red",
+  "brand": "AULA",
+  "category": "keyboards",
+  "images": [
+    "https://images.prom.ua/7379104573_w640_h640_magnitnaya-klaviatura-aula.jpg",
+    "https://images.prom.ua/7379104580_w640_h640_magnitnaya-klaviatura-aula.jpg",
+    "https://images.prom.ua/7379104563_w640_h640_magnitnaya-klaviatura-aula.jpg",
+    "https://pcboost.com.ua/content/uploads/images/14.png",
+    "https://ir.ozone.ru/s3/multimedia-1-i/w500/7540450290.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-0/c1000/7540402536.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-j/c1000/7608829051.jpg"
+  ],
+  "short": "Игровая магнитная клавиатура 65% с Hall Effect, Rapid Trigger, опросом 8000 Гц и свитчами WingChun.",
+  "description": "AULA WIN 68 HE MAX Black Red — это продвинутая игровая магнитная клавиатура формата 65% на технологических переключателях WingChun Magnetic Switch. Оснащена функциями Rapid Trigger, регулировкой точки срабатывания от 0.1 до 3.4 мм (с точностью до 0.02 мм), ультравысокой частотой опроса 8000 Гц и задержкой 0.2 мс. Имеет PBT Double-shot кейкапы с боковым гравированием, RGB-подсветку и поддержку hot-swap.",
+  "price": 3249,
+  "fairPrice": 4249,
+  "scores": {
+    "community": 9500000,
+    "personal": 9400000,
+    "ai": 9450000
+  },
+  "class": "performance",
+  "connection": "wired",
+  "mechanism": "magnetic",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Киберспортсмен",
+      "score": 9.4,
+      "date": "2026-08-22",
+      "text": "Отличный бюджетный вход в мир магнитной механики с Rapid Trigger. Частота опроса 8000 Гц и регулировка свитчей WingChun дают огромный плюс в динамичных шутерах вроде CS2 и Valorant."
+    }
+  ],
+  "specs": {
+    "Формат": "65% (компактная)",
+    "Переключатели": "WingChun Magnetic Switch (магнитные, линейные, с заводской смазкой)",
+    "Hot-swap": "Да (сменные переключатели)",
+    "Частота опроса": "8000 Гц",
+    "Задержка": "0.2 мс",
+    "Регулировка активации": "От 0.1 мм до 3.4 мм (точность 0.02 мм)",
+    "Кейкапы": "PBT Double-shot с боковым гравированием",
+    "Подключение": "Дротове USB Type-C",
+    "Габариты и вес": "321 х 109 х 37.6 мм, 700 г"
+  },
+  "shops": [
+    {
+      "name": "Prom.ua (Скидка)",
+      "price": 3249,
+      "currency": "UAH"
+    },
+    {
+      "name": "Prom.ua (Стандарт)",
+      "price": 4249,
+      "currency": "UAH"
+    },
+    {
+      "name": "Ozon",
+      "price": 4348,
+      "currency": "UAH",
+      "rubPrice": 10000
+    }
+  ],
+  "pros": [
+    "Магнитные свитчи WingChun с функцией Rapid Trigger и регулировкой от 0.1 мм",
+    "Частота опроса 8000 Гц и низкая задержка (0.2 мс)",
+    "Поддержка горячей замены (hot-swap) переключателей",
+    "Качественные PBT кейкапы с боковым гравированием",
+    "Выгодная цена по скидке на Prom.ua"
+  ],
+  "cons": [
+    "Завышенная цена на Ozon (около 10к рублей / ~4348 грн)",
+    "Более простой пластиковый/бюджетный корпус по сравнению с премиальными аналогами"
+  ],
+  "life": {
+    "months": 60,
+    "risk": 2,
+    "riskLabel": "Магнитные свитчи без физического износа контактов",
+    "fail": 85,
+    "failLabel": "Разъем USB-C / Кабель"
+  },
+  "bench": {
+    "input": 9.8,
+    "ergo": 8.8,
+    "materials": 8.9,
+    "features": 9.6,
+    "reliability": 9.5,
+    "support": 8.5,
+    "build": 8.8,
+    "software": 9.0,
+    "value": 9.2,
+    "feel": 9.4
+  }
+}

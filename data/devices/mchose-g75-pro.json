@@ -1,0 +1,86 @@
+{
+  "id": "mchose-g75-pro",
+  "name": "MCHOSE G75 Pro",
+  "brand": "MCHOSE",
+  "category": "keyboards",
+  "images": [
+    "https://ir.ozone.ru/s3/multimedia-1-k/c1000/7854461552.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-8/c600/7387833176.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-i/7436597166.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-2/c600/7387834430.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-k/c400/7233528296.jpg",
+    "https://images.prom.ua/6760749421_w640_h320_mehanicheskaya-klaviatura-mchose.jpg",
+    "https://ireland.apollo.olxcdn.com/v1/files/3i6dw9e12vv22-UA/image;s=1000x700"
+  ],
+  "short": "Беспроводная механическая клавиатура формата 75% с отличным соотношением цены и возможностей.",
+  "description": "MCHOSE G75 Pro — это популярная беспроводная механическая клавиатура формата 75%, предлагающая отличный баланс цены и функционала. Поддерживает беспроводное и проводное подключение, обладает качественной сборкой и приятным тайпингом.",
+  "price": 2589,
+  "fairPrice": 3000,
+  "scores": {
+    "community": 9100000,
+    "personal": 9000000,
+    "ai": 9050000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Пользователь",
+      "score": 9.0,
+      "date": "2026-08-22",
+      "text": "Отличная беспроводная клавиатура за свои деньги, особенно если брать с рук на OLX или по скидке на Ozon."
+    }
+  ],
+  "specs": {
+    "Формат": "75%",
+    "Тип": "Механическая беспроводная",
+    "Подключение": "Гибридное (провод, 2.4 ГГц, Bluetooth)"
+  },
+  "shops": [
+    {
+      "name": "OLX",
+      "price": 2589,
+      "currency": "UAH"
+    },
+    {
+      "name": "Prom.ua",
+      "price": 3900,
+      "currency": "UAH"
+    },
+    {
+      "name": "Ozon",
+      "price": 1213,
+      "currency": "UAH",
+      "rubPrice": 2789
+    }
+  ],
+  "pros": [
+    "Доступная цена (особенно на OLX и Ozon)",
+    "Популярный формат 75%",
+    "Беспроводные режимы работы"
+  ],
+  "cons": [
+    "Разброс цен на разных площадках (на Prom.ua дороже)"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 4,
+    "riskLabel": "Стандартный износ аккумулятора",
+    "fail": 70,
+    "failLabel": "Беспроводной модуль"
+  },
+  "bench": {
+    "input": 9.0,
+    "ergo": 8.9,
+    "materials": 8.5,
+    "features": 9.0,
+    "reliability": 8.5,
+    "support": 8.0,
+    "build": 8.8,
+    "software": 8.5,
+    "value": 9.5,
+    "feel": 9.0
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "epomaker-g84",
+  "name": "Epomaker G84",
+  "brand": "Epomaker",
+  "category": "keyboards",
+  "images": [
+    "https://content2.rozetka.com.ua/goods/images/big/658028081.webp",
+    "https://content.rozetka.com.ua/goods/images/big/658028092.webp",
+    "https://content.rozetka.com.ua/goods/images/big/658028063.webp",
+    "https://epomaker.com/cdn/shop/files/G84PRO.png?v=1773129893&width=1400",
+    "https://epomaker.com/cdn/shop/files/EPOMAKERG84PRO_12-min.png?v=1773129893&width=1400"
+  ],
+  "short": "Беспроводная клавиатура 75% с аккумулятором 8000 мАч, опросом 8к Гц и быстрым откликом.",
+  "description": "Epomaker G84 — это продвинутая механическая клавиатура формата 75% (81 кнопка) с массивным аккумулятором на 8000 мАч, частотой опроса 8000 Гц и минимальным откликом. Оснащена линейными переключателями, Gasket mount структурой, змащенными стабилизаторами и поддержкой горячей замены (hot-swap).",
+  "price": 3000,
+  "fairPrice": 3500,
+  "scores": {
+    "community": 9500000,
+    "personal": 9400000,
+    "ai": 9450000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Геймер-энтузиаст",
+      "score": 9.4,
+      "date": "2026-08-22",
+      "text": "Невероятная батарея на 8000 мАч и частота опроса 8000 Гц в сочетании с быстрым откликом делают эту клавиатуру топовым решением для игр."
+    }
+  ],
+  "specs": {
+    "Формат": "75% (81 кнопка)",
+    "Аккумулятор": "8000 мАч",
+    "Частота опроса": "8000 Гц",
+    "Отклик": "125 мс и меньше (высокоскоростной)",
+    "Конструкция": "Gasket mount",
+    "Подключение": "Bluetooth, USB Type-C, 2.4 ГГц",
+    "Особенности": "Hot swap, змащені стабілізатори, RGB-підсвітка"
+  },
+  "shops": [
+    {
+      "name": "Rozetka (Акция)",
+      "price": 3000,
+      "currency": "UAH"
+    },
+    {
+      "name": "Rozetka (Стандарт)",
+      "price": 3990,
+      "currency": "UAH"
+    },
+    {
+      "name": "Ozon",
+      "price": 2348,
+      "currency": "UAH",
+      "rubPrice": 5400
+    },
+    {
+      "name": "Epomaker (Скидка)",
+      "price": 81,
+      "currency": "USD"
+    },
+    {
+      "name": "Epomaker (Стандарт)",
+      "price": 90,
+      "currency": "USD"
+    }
+  ],
+  "pros": [
+    "Огромный аккумулятор на 8000 мАч",
+    "Высокая частота опроса 8000 Гц и быстрый отклик",
+    "Конструкция Gasket mount и змащені стабілізатори",
+    "Тройное подключение и поддержка Hot-swap"
+  ],
+  "cons": [
+    "Цена на официальном сайте выше ($81–$90), чем акционная на Розетке"
+  ],
+  "life": {
+    "months": 48,
+    "risk": 3,
+    "riskLabel": "Надежная элементная база",
+    "fail": 85,
+    "failLabel": "Аккумулятор"
+  },
+  "bench": {
+    "input": 9.5,
+    "ergo": 9.1,
+    "materials": 8.9,
+    "features": 9.6,
+    "reliability": 9.0,
+    "support": 8.5,
+    "build": 9.2,
+    "software": 8.8,
+    "value": 9.6,
+    "feel": 9.4
+  }
+}

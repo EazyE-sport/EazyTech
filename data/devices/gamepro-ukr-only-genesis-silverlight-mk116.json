@@ -1,0 +1,87 @@
+{
+  "id": "gamepro-ukr-only-genesis-silverlight-mk116",
+  "name": "Клавиатура GamePro UKR ONLY Genesis Silverlight MK116 Grey",
+  "brand": "GamePro UKR ONLY",
+  "category": "keyboards",
+  "images": [
+    "https://content1.rozetka.com.ua/goods/images/big/566407183.jpg",
+    "https://content2.rozetka.com.ua/goods/images/big/566407186.jpg",
+    "https://content.rozetka.com.ua/goods/images/big/566407187.png",
+    "https://content2.rozetka.com.ua/goods/images/big/566407189.jpg",
+    "https://content1.rozetka.com.ua/goods/images/big/566407191.png",
+    "https://content.rozetka.com.ua/goods/images/big/566407192.png",
+    "https://content2.rozetka.com.ua/goods/images/big/566407193.png",
+    "https://content2.rozetka.com.ua/goods/images/big/566407195.png"
+  ],
+  "short": "Компактная механическая клавиатура 65% с Gasket mount, горячей заменой переключателей и белой LED-подсветкой.",
+  "description": "Механическая клавиатура GamePro UKR ONLY Genesis Silverlight — это компактная и мощная клавиатура 65% форм-фактора, которая сочетает элегантный дизайн и высокую производительность. Её эргономичный размер обеспечивает удобство и эффективность при использовании, сохраняя все важные функции, необходимые для работы и игры.\n\nКлавиатура оснащена смазанными линейными переключателями Red, обеспечивающими плавный ход и минимальное сопротивление при нажатии. Они имеют ресурс до 70 миллионов нажатий, что гарантирует их долговечность.\n\nТип конструкции Gasket Mount с двумя шумопоглощающими слоями пены EVA снижает шум во время набора текста и добавляет комфорта. Модель поддерживает белую LED-подсветку, которая добавляет элегантности и позволяет настроить стиль клавиатуры под любой интерьер или предпочтения пользователя. Съемный Type-C кабель длиной 1.8 м обеспечивает удобство при подключении.",
+  "price": 1699,
+  "fairPrice": 1750,
+  "scores": {
+    "community": 7500000,
+    "personal": 7800000,
+    "ai": 7600000
+  },
+  "class": "value",
+  "connection": "wired",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "EazyTech Review",
+      "score": 8,
+      "date": "2026-06-01",
+      "text": "Отличный вариант 65% клавиатуры с Gasket mount и поддержкой Hot swap за разумные деньги."
+    }
+  ],
+  "specs": {
+    "Форм-фактор": "65%",
+    "Тип клавиатуры": "Механическая",
+    "Переключатели": "YH switches (линейные Red)",
+    "Подсветка": "Белая LED",
+    "Особенности": "Gasket mount, Hot swap, смазанные стабилизаторы",
+    "Вес": "510 г",
+    "Размеры": "324 х 111 х 40 мм",
+    "Страна регистрации бренда": "Украина"
+  },
+  "shops": [
+    {
+      "name": "Розетка",
+      "price": 1699
+    },
+    {
+      "name": "Фокстрот",
+      "price": 1899
+    }
+  ],
+  "pros": [
+    "Gasket mount и два слоя шумоизоляции EVA",
+    "Поддержка Hot swap (горячая замена переключателей)",
+    "Смазанные переключатели и стабилизаторы с завода",
+    "Компактный форм-фактор 65%",
+    "Съемный кабель USB Type-C"
+  ],
+  "cons": [
+    "Недоступно в РФ из-за бренда",
+    "Одноцветная белая подсветка (без RGB)"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 18,
+    "riskLabel": "Возможен износ кейкапов или отдельных свитчей при активном гейминге.",
+    "fail": 60,
+    "failLabel": "Общий ресурс механических элементов платы."
+  },
+  "bench": {
+    "input": 8.0,
+    "ergo": 7.5,
+    "materials": 7.0,
+    "features": 8.5,
+    "reliability": 7.5,
+    "support": 7.0,
+    "build": 8.0,
+    "software": 6.0,
+    "value": 9.0,
+    "feel": 8.0
+  }
+}

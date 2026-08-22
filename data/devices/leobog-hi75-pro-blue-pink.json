@@ -1,0 +1,87 @@
+{
+  "id": "leobog-hi75-pro-blue-pink",
+  "name": "Клавиатура Leobog HI75 Pro Blue-Pink",
+  "brand": "Leobog",
+  "category": "keyboards",
+  "images": [
+    "https://content2.rozetka.com.ua/goods/images/big/626745796.png",
+    "https://content.rozetka.com.ua/goods/images/big/626745788.png",
+    "https://content2.rozetka.com.ua/goods/images/big/671873941.png",
+    "https://content2.rozetka.com.ua/goods/images/big/671873945.png",
+    "https://content.rozetka.com.ua/goods/images/big/671873943.png",
+    "https://content.rozetka.com.ua/goods/images/big/671873944.png",
+    "https://ir.ozone.ru/s3/multimedia-1-2/c1000/7123555586.jpg"
+  ],
+  "short": "Современная беспроводная механическая клавиатура 75% в алюминиевом корпусе с Gasket-mount, Hot swap и мультимедийным роллером.",
+  "description": "LEOBOG HI75 Pro Wireless (Blue-Pink) - современная механическая клавиатура в компактном формате 75% (81 клавиша), которая поєднует стильный дизайн, предельную конструкцию и беспроводные возможности. Корпус выполнен из алюминиевого сплава с прокладками (gasket-mount), что обеспечивает приятный звук нажатия клавиш и минимум сторонних шумов.\n\nПодключение реализовано в трех режимах: проводное (USB-C), беспроводное 2.4 ГГц и Bluetooth. Клавиатура оснащена мультимедийным роллером для управления громкостью и RGB-подсветкой с большим количеством эффектов.",
+  "price": 4499,
+  "fairPrice": 5000,
+  "scores": {
+    "community": 8100000,
+    "personal": 8400000,
+    "ai": 8200000
+  },
+  "class": "premium",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "EazyTech Review",
+      "score": 8.0,
+      "date": "2026-06-01",
+      "text": "Премиальный алюминиевый корпус и отличный тайпинг, но к качеству мультимедийного роллера есть вопросы."
+    }
+  ],
+  "specs": {
+    "Форм-фактор": "75% (81 клавиша)",
+    "Материал корпуса": "Алюминиевый сплав",
+    "Монтаж": "Gasket-mount",
+    "Подключение": "USB-C, 2.4 ГГц, Bluetooth",
+    "Особенности": "Hot swap, мультимедийный роллер, RGB-подсветка",
+    "Вес": "1230 г",
+    "Ресурс переключателей": "100 млн нажатий"
+  },
+  "shops": [
+    {
+      "name": "Розетка (скидка)",
+      "price": 4499
+    },
+    {
+      "name": "Розетка (стандарт)",
+      "price": 6900
+    },
+    {
+      "name": "Озон (стандарт)",
+      "price": "4299RUB"
+    }
+  ],
+  "pros": [
+    "Огромные скидки на украинских маркетплейсах",
+    "Прочный и тяжелый алюминиевый корпус",
+    "Приятный тайпинг и шумоизоляция",
+    "Доступ к кастомизации и Hot swap"
+  ],
+  "cons": [
+    "Проблемный роллер: может быстро выйти из строя, царапается и начинает скрипеть/песочить"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 20,
+    "riskLabel": "Возможен износ механизма роллера или аккумулятора.",
+    "fail": 50,
+    "failLabel": "Выработка ресурса роллера или платы."
+  },
+  "bench": {
+    "input": 9.0,
+    "ergo": 8.5,
+    "materials": 9.5,
+    "features": 8.5,
+    "reliability": 7.0,
+    "support": 8.0,
+    "build": 9.0,
+    "software": 8.0,
+    "value": 8.5,
+    "feel": 9.0
+  }
+}
