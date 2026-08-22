@@ -1,0 +1,81 @@
+{
+  "id": "aula-f75-max",
+  "name": "Aula F75 Max",
+  "brand": "Aula",
+  "category": "keyboards",
+  "images": [
+    "https://vusa.org.ua/content/images/5/800x800l80mc0/klaviatura-bezdrotova-aula-f75-max-rgb-blue-ukr-eng-16617928951526.webp",
+    "https://vusa.org.ua/content/images/5/1199x1199l80mc0/klaviatura-bezdrotova-aula-f75-max-rgb-blue-ukr-eng-52614455490211.webp",
+    "https://vusa.org.ua/content/images/5/1080x1080l80mc0/klaviatura-bezdrotova-aula-f75-max-rgb-blue-ukr-eng-33627010451121.webp",
+    "https://vusa.org.ua/content/images/5/1000x1000l80mc0/klaviatura-bezdrotova-aula-f75-max-rgb-blue-ukr-eng-25328479098734.webp"
+  ],
+  "short": "Популярная компактная клавиатура 75% с экраном, энкодером и тройным подключением.",
+  "description": "Aula F75 Max — это функциональная механическая клавиатура формата 75% с OLED-экраном и мультимедийным энкодером. Отличается отличным звуком из коробки, поддержкой тройного подключения (Bluetooth, 2.4 ГГц, кабель) и качественными переключателями Leobog Reaper. Популярна среди энтузиастов благодаря сочетанию цены, дизайна и акустических свойств.",
+  "price": 2799,
+  "fairPrice": 2700,
+  "scores": {
+    "community": 9500000,
+    "personal": 9200000,
+    "ai": 9350000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Энтузиаст",
+      "score": 9.3,
+      "date": "2026-08-22",
+      "text": "Лучший «тапинг» в бюджете до 3000 грн. Экран и энкодер — приятное дополнение."
+    }
+  ],
+  "specs": {
+    "Формат": "75% (80 клавиш)",
+    "Корпус": "Пластик",
+    "Тип переключателей": "Leobog Reaper (Hot-swap)",
+    "Подключение": "Bluetooth, 2.4 ГГц, кабель Type-C",
+    "Аккумулятор": "4000 мАч",
+    "Кейкапы": "PBT Cherry profile",
+    "Особенности": "Экран, энкодер, RGB"
+  },
+  "shops": [
+    {
+      "name": "Foxtrot",
+      "price": 2799
+    },
+    {
+      "name": "Rozetka",
+      "price": 3199
+    }
+  ],
+  "pros": [
+    "Тройное подключение",
+    "Наличие экрана и энкодера",
+    "Отличные переключатели Leobog Reaper",
+    "Hot-swap поддержка"
+  ],
+  "cons": [
+    "Пластиковый корпус",
+    "Автономность с подсветкой ограничена"
+  ],
+  "life": {
+    "months": 48,
+    "risk": 5,
+    "riskLabel": "Износ экрана",
+    "fail": 60,
+    "failLabel": "Аккумулятор"
+  },
+  "bench": {
+    "input": 9.2,
+    "ergo": 9.0,
+    "materials": 8.5,
+    "features": 9.5,
+    "reliability": 9.0,
+    "support": 8.5,
+    "build": 9.0,
+    "software": 8.0,
+    "value": 9.7,
+    "feel": 9.5
+  }
+}

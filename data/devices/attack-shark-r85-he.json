@@ -1,0 +1,85 @@
+{
+  "id": "attack-shark-r85-he",
+  "name": "Attack Shark R85 HE White Contours",
+  "brand": "Attack Shark",
+  "category": "keyboards",
+  "images": [
+    "https://images.prom.ua/7069154411_w640_h640_magnitnaya-klaviatura-attack.jpg",
+    "https://images.prom.ua/7069154593_w640_h640_magnitnaya-klaviatura-attack.jpg",
+    "https://images.prom.ua/7069155004_w640_h640_magnitnaya-klaviatura-attack.jpg"
+  ],
+  "short": "Компактная магнитная геймерская клавиатура формата 75% с Rapid Trigger и 8000 Гц.",
+  "description": "Attack Shark R85 HE — это высокопроизводительная магнитная клавиатура с поддержкой Rapid Trigger, регулируемой точкой срабатывания (0.1–3.3 мм) и частотой опроса 8000 Гц. Модель создана для соревновательных игр (CS2, Valorant), оснащена кастомным RGB Lightbox, мультимедийным колесом прокрутки и пятью слотами шумоизоляции.",
+  "price": 2899,
+  "fairPrice": 2800,
+  "scores": {
+    "community": 9100000,
+    "personal": 9000000,
+    "ai": 9050000
+  },
+  "class": "performance",
+  "connection": "wired",
+  "mechanism": "magnetic",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Киберспортсмен",
+      "score": 9.1,
+      "date": "2026-08-22",
+      "text": "Rapid Trigger работает отлично, задержка минимальная. За свои деньги — топ для шутеров."
+    }
+  ],
+  "specs": {
+    "Формат": "75%",
+    "Корпус": "ABS-пластик с шумоизоляцией",
+    "Тип переключателей": "Магнитные (Hot Swap)",
+    "Подключение": "Дротовое (USB-C)",
+    "Кейкапы": "PBT Double-shot",
+    "Вес": "Около 0.9 кг",
+    "Софт": "Веб-драйвер qmk.top"
+  },
+  "shops": [
+    {
+      "name": "ПКбуст",
+      "price": 2899
+    },
+    {
+      "name": "Rozetka",
+      "price": 3000
+    },
+    {
+      "name": "Prom",
+      "price": 3900
+    }
+  ],
+  "pros": [
+    "Технология Rapid Trigger и магнитные свитчи",
+    "Частота опроса 8000 Гц",
+    "Мультимедийный регулятор (колесо прокрутки)",
+    "Доступная цена"
+  ],
+  "cons": [
+    "Только проводное подключение",
+    "ABS-пластик корпуса",
+    "Качество ПО бюджетных брендов"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 6,
+    "riskLabel": "Износ магнитных датчиков",
+    "fail": 60,
+    "failLabel": "Электроника"
+  },
+  "bench": {
+    "input": 9.9,
+    "ergo": 8.5,
+    "materials": 7.5,
+    "features": 9.8,
+    "reliability": 8.5,
+    "support": 8.0,
+    "build": 8.0,
+    "software": 8.5,
+    "value": 9.8,
+    "feel": 8.8
+  }
+}

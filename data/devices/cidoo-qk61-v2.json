@@ -1,0 +1,79 @@
+{
+  "id": "cidoo-qk61-v2",
+  "name": "Cidoo QK61 V2",
+  "brand": "Cidoo",
+  "category": "keyboards",
+  "images": [
+    "https://content2.rozetka.com.ua/goods/images/big/518740761.jpg",
+    "https://content1.rozetka.com.ua/goods/images/big/518740754.jpg",
+    "https://content2.rozetka.com.ua/goods/images/big/518740813.jpg",
+    "https://content.rozetka.com.ua/goods/images/big/518740803.webp"
+  ],
+  "short": "Компактная 60% клавиатура с качественными свитчами и тройным подключением.",
+  "description": "Cidoo QK61 V2 — это минималистичная 60% механическая клавиатура. Модель предлагает тройное подключение (Bluetooth, 2.4 ГГц, кабель), качественные линейные переключатели Cidoo Pearl White и приятную RGB-подсветку. Отличный выбор для тех, кто ценит компактность и чистоту рабочего стола.",
+  "price": 2290,
+  "fairPrice": 2500,
+  "scores": {
+    "community": 9200000,
+    "personal": 9000000,
+    "ai": 9100000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Компакт",
+      "score": 9.0,
+      "date": "2026-08-22",
+      "text": "Очень компактная и приятная в печати. Линейные свитчи Pearl White звучат достойно."
+    }
+  ],
+  "specs": {
+    "Формат": "60% (61 клавиша)",
+    "Корпус": "Пластик",
+    "Тип переключателей": "Cidoo Pearl White (Линейные)",
+    "Подключение": "Bluetooth, 2.4 ГГц, USB",
+    "Размеры": "330x123x20 мм",
+    "Особенности": "RGB, тройное подключение"
+  },
+  "shops": [
+    {
+      "name": "Rozetka (Стандарт)",
+      "price": 2990
+    },
+    {
+      "name": "Rozetka (Акция)",
+      "price": 2290
+    }
+  ],
+  "pros": [
+    "Компактный 60% формат",
+    "Тройное подключение",
+    "Приятные линейные переключатели Cidoo Pearl White"
+  ],
+  "cons": [
+    "Отсутствие стрелок и навигационных клавиш (в стандартном слое)",
+    "Пластиковый корпус"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 5,
+    "riskLabel": "Износ стабилизаторов",
+    "fail": 60,
+    "failLabel": "Электроника"
+  },
+  "bench": {
+    "input": 9.0,
+    "ergo": 8.0,
+    "materials": 8.5,
+    "features": 8.5,
+    "reliability": 9.0,
+    "support": 8.5,
+    "build": 9.0,
+    "software": 8.0,
+    "value": 9.5,
+    "feel": 9.0
+  }
+}
