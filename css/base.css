@@ -30,6 +30,12 @@
   padding: 0;
 }
 
+/* атрибут hidden должен всегда скрывать элемент,
+   даже если класс задаёт display: grid/flex и т. п. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
