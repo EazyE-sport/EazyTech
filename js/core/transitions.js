@@ -20,6 +20,7 @@ export function init() {
     const href = a.getAttribute("href") || "";
     if (href.startsWith("#") || !/\.html(\?|$)/.test(href)) return;
     e.preventDefault();
+    if (!wipe) build();
     wipe.classList.remove("open");
     void wipe.offsetWidth;
     wipe.classList.add("play");

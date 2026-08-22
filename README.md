@@ -64,7 +64,9 @@
   "kolhoz": false,
   "reviews": [{ "author": "Стас", "score": 7, "date": "2026-02-15", "text": "..." }],
   "specs": { "Вес": "85 г", "Сенсор": "Mercury" },
-  "shops": [{ "name": "DNS", "price": 1790 }],
+  "shops": [{ "name": "DNS", "price": 1790 }, { "name": "OZON", "price": "3000RUB" }],
+  // shops[].price: число = гривны, или строка с валютой на конце —
+  // 3000RUB / 79EUR / 69USD (69DLR) / 2990UAH. Конвертация — на сайте.
   "pros": ["..."],
   "cons": ["..."],
   "life": { "months": 18, "risk": 10, "riskLabel": "...", "fail": 36, "failLabel": "..." },

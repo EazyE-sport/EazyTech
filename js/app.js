@@ -214,6 +214,20 @@ async function homeInit() {
   const featured = [...list].sort((a, b) => avg(b) - avg(a)).slice(0, 3);
   cards.render($("#featured"), featured, rmap);
 
+  // рекомендации дня — детерминированные по дате, меняются раз в сутки
+  const daily = $("#daily");
+  if (daily && list.length) {
+    const day = Math.floor(Date.now() / 864e5);
+    const i1 = day % list.length;
+    let i2 = (day * 7 + 3) % list.length;
+    if (i2 === i1) i2 = (i2 + 1) % list.length;
+    cards.render(daily, [list[i1], list[i2]], rmap);
+    $("#dailyDate").textContent = new Date().toLocaleDateString("ru-RU", {
+      day: "numeric",
+      month: "long",
+    });
+  }
+
   const top = featured[0] || {};
   const stats = $("#stats");
   stats.innerHTML = `
@@ -699,6 +713,13 @@ async function devInit() {
       btn.textContent = "+ Добавить к сравнению";
       toast("Убрано из сравнения");
     } else {
+      const others = l.map((x) => list.find((y) => y.id === x)).filter(Boolean);
+      if (others.some((x) => x.category !== d.category)) {
+        cmpSave([d.id]);
+        btn.textContent = "В сравнении ✓";
+        toast("Сравнение сброшено — можно сравнивать только один тип устройств");
+        return;
+      }
       if (l.length >= 2) l.shift();
       l.push(d.id);
       cmpSave(l);
@@ -778,14 +799,23 @@ async function cmpInit() {
   }
 
   function showPicker() {
-    picker.querySelectorAll("select").forEach((sel, i) => {
-      sel.innerHTML = list.map((d) =>
-        `<option value="${d.id}" ${d.id === ids[i] ? "selected" : ""}>${d.name}</option>`).join("");
-    });
+    const [selA, selB] = picker.querySelectorAll("select");
+    selA.innerHTML = list.map((d) =>
+      `<option value="${d.id}" ${d.id === ids[0] ? "selected" : ""}>${d.name}</option>`).join("");
+
+    const fillB = () => {
+      const aDev = list.find((d) => d.id === selA.value);
+      const opts = list.filter((d) => aDev && d.category === aDev.category && d.id !== aDev.id);
+      selB.innerHTML = opts.map((d) =>
+        `<option value="${d.id}" ${d.id === ids[1] ? "selected" : ""}>${d.name}</option>`).join("")
+        || '<option value="">— нет пары в этой категории —</option>';
+    };
+    selA.onchange = fillB;
+    fillB();
     picker.classList.add("open");
   }
 
-  if (!a || !b) {
+  if (!a || !b || a.category !== b.category) {
     showPicker();
     document.title = "Сравнение — EazyTech";
     return;
@@ -823,7 +853,7 @@ async function cmpInit() {
 
 /* ============ запуск ============ */
 
-fieldInit(PAGE === "device" ? "trail" : "grid");
+fieldInit("grid");
 transInit();
 navFx();
 rippleFx();

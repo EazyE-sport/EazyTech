@@ -38,3 +38,20 @@ export function fmt(v) {
   const s = CURRENCIES.find((c) => c.id === cur).sym;
   return `${str} ${s}`;
 }
+
+// цена магазина: число (гривны) или строка с валютой на конце —
+// "3000RUB", "79EUR", "69USD" / "69DLR", "2990UAH"
+const SUF_RATE = {
+  uah: 1, "₴": 1,
+  usd: RATES.usd, dlr: RATES.usd, "$": RATES.usd,
+  eur: RATES.eur, "€": RATES.eur,
+  rub: RATES.rub, "₽": RATES.rub,
+};
+
+export function toUah(v) {
+  if (typeof v === "number") return v;
+  const s = String(v).trim().replace(/[ ,]/g, "").toLowerCase();
+  const m = s.match(/^(\d+(?:\.\d+)?)(uah|usd|dlr|eur|rub|₴|\$|€|₽)?$/);
+  if (!m) return 0;
+  return parseFloat(m[1]) * (SUF_RATE[m[2]] ?? 1);
+}
