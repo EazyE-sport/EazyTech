@@ -495,7 +495,8 @@
 }
 
 .thumb img {
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   -webkit-mask-image: radial-gradient(ellipse 96% 94% at 50% 50%, #000 84%, transparent 99%);
   mask-image: radial-gradient(ellipse 96% 94% at 50% 50%, #000 84%, transparent 99%);
