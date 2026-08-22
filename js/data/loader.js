@@ -1,4 +1,4 @@
-const KEY = "et-devices-v4";
+const KEY = "et-devices-v5";
 const MANIFEST = "data/devices/index.json";
 const SKIP = ["index.json", "test-device.json"];
 let cache = null;
@@ -88,20 +88,26 @@ async function pull() {
 
 export async function all() {
   if (cache) return cache;
+
+  // всегда тянем свежие данные — владелец постоянно добавляет файлы,
+  // старый кеш показывал устаревший каталог
   try {
-    cache = JSON.parse(sessionStorage.getItem(KEY));
-  } catch {
-    cache = null;
-  }
-  if (!cache || !cache.length) {
     cache = await pull();
     try {
       sessionStorage.setItem(KEY, JSON.stringify(cache));
     } catch {
       /* приватный режим — не критично */
     }
+    return cache;
+  } catch {
+    // сеть/API отвалились — отдаём последний удачный список, если был
+    try {
+      cache = JSON.parse(sessionStorage.getItem(KEY)) || [];
+    } catch {
+      cache = [];
+    }
+    return cache;
   }
-  return cache;
 }
 
 export async function byId(id) {
