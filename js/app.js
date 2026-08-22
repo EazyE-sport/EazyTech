@@ -576,9 +576,10 @@ function bindGroup(box) {
         F.state.deal = cb.checked;
       } else {
         const g = cb.dataset.g;
+        const key = g === "brand" ? "brands" : g;
         const v = cb.value;
-        const arr = F.state[g];
-        F.state[g] = cb.checked ? [...arr, v] : arr.filter((x) => x !== v);
+        const arr = F.state[key];
+        F.state[key] = cb.checked ? [...arr, v] : arr.filter((x) => x !== v);
       }
       paint();
     });
