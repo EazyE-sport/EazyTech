@@ -1,4 +1,4 @@
-const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
+import { fmt as money } from "../data/settings.js";
 
 export function draw(wrap, d) {
   const max = Math.max(...d.shops.map((s) => s.price), d.fairPrice) * 1.1;

@@ -1,8 +1,8 @@
-import { init as cursorInit } from "./core/cursor.js";
 import { init as fieldInit } from "./core/particles.js";
 import { init as transInit } from "./core/transitions.js";
 import * as scroll from "./core/scroll-anim.js";
 import { all, byId, avg, ranks } from "./data/loader.js";
+import { CURRENCIES, getCur, setCur, fmt } from "./data/settings.js";
 import * as F from "./data/filters.js";
 import * as cards from "./ui/cards.js";
 import { draw as radarDraw } from "./ui/radar-chart.js";
@@ -12,7 +12,7 @@ import { draw as cmpDraw, type as typeOut } from "./ui/compare.js";
 const PAGE = document.body.dataset.page;
 const CALM = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
+const money = fmt;
 const fmtScore = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
 const CATS = { mice: "Мыши", keyboards: "Клавиатуры", headphones: "Наушники" };
@@ -49,6 +49,58 @@ function cmpList() {
 
 function cmpSave(list) {
   localStorage.setItem("et-cmp", JSON.stringify(list));
+}
+
+/* ---------- настройки ---------- */
+
+const settingsModal = document.createElement("div");
+settingsModal.className = "picker";
+settingsModal.innerHTML = `
+  <div class="picker-box">
+    <h3>Настройки</h3>
+    <p class="muted" style="font-size:13px">Валюта цен — конвертируется из гривны</p>
+    <div class="cur-row">
+      ${CURRENCIES.map((c) =>
+        `<button class="chip${getCur() === c.id ? " on" : ""}" data-cur="${c.id}">${c.sym} ${c.label}</button>`).join("")}
+    </div>
+    <button class="btn btn--ghost" data-close>Закрыть</button>
+  </div>`;
+document.body.append(settingsModal);
+
+function settingsFx() {
+  const gear = document.createElement("button");
+  gear.className = "gear";
+  gear.setAttribute("aria-label", "Настройки");
+  gear.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.01a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55h.01a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.01a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>';
+  $(".nav-in").insertBefore(gear, $(".burger"));
+
+  const open = (v) => {
+    settingsModal.classList.toggle("open", v);
+    document.body.style.overflow = v ? "hidden" : "";
+  };
+
+  gear.addEventListener("click", () => open(true));
+  settingsModal.querySelector("[data-close]").addEventListener("click", () => open(false));
+  settingsModal.addEventListener("click", (e) => {
+    if (e.target === settingsModal) open(false);
+  });
+
+  settingsModal.querySelectorAll("[data-cur]").forEach((b) => {
+    b.addEventListener("click", () => {
+      setCur(b.dataset.cur);
+      settingsModal.querySelectorAll("[data-cur]").forEach((x) => x.classList.toggle("on", x === b));
+      open(false);
+      toast(`Валюта: ${b.textContent.trim()}`);
+      redraw();
+    });
+  });
+}
+
+function redraw() {
+  if (PAGE === "home") homeInit();
+  if (PAGE === "cat") catInit();
+  if (PAGE === "device") devInit();
+  if (PAGE === "cmp") cmpInit();
 }
 
 /* ---------- логотип ---------- */
@@ -183,6 +235,45 @@ async function homeInit() {
   const nums = stats.querySelectorAll("[data-n]");
   const vals = [list.length, Object.keys(CATS).length, avg(top)];
   nums.forEach((n, i) => setTimeout(() => counter(n, vals[i]), 400 + i * 150));
+
+  const how = $("#how");
+  how.innerHTML = [
+    ["Оценки 0–10 млн", "Общество, личный опыт и ИИ выставляют баллы в формате бенчмарков. Средний балл и места в топах считаются сами."],
+    ["Fair price", "Честная цена от редакции против ценников магазинов. Всё, что дороже, — красное и трясётся."],
+    ["Когда песочить", "Таймлайн долговечности: ожидаемый срок службы, первые звоночки и момент, когда дешевле выкинуть."],
+  ].map(([t, d], i) => `
+    <div class="how-i reveal ${i % 2 ? "right" : "left"}" data-reveal>
+      <span class="n">0${i + 1}</span>
+      <h3>${t}</h3>
+      <p>${d}</p>
+    </div>`).join("");
+  scroll.watch($("#how"), 110);
+
+  const revs = [];
+  list.forEach((d) => (d.reviews || []).forEach((r) => revs.push({ d, r })));
+  revs.sort((a, b) => (b.r.date || "").localeCompare(a.r.date || ""));
+  const latest = revs.slice(0, 4);
+
+  const latSec = $("#latSec");
+  if (latest.length) {
+    $("#latest").innerHTML = latest.map(({ d, r }) => `
+      <div class="lat-item reveal" data-reveal>
+        <div class="lat-head">
+          <a class="lnk" href="device.html?id=${d.id}">${d.name}</a>
+          <span class="rev-score ${cards.tint(r.score)}">${r.score}/10</span>
+        </div>
+        <p>${r.text}</p>
+        <span class="lat-meta">${r.author} · ${r.date}</span>
+      </div>`).join("");
+    scroll.watch($("#latest"), 110);
+  } else {
+    latSec.hidden = true;
+  }
+
+  const brands = [...new Set(list.map((d) => d.brand).filter(Boolean))];
+  const words = ["EAZYTECH", ...brands];
+  const row = words.map((w) => `<span>${w} <i>·</i></span>`).join("");
+  $("#marquee").innerHTML = `<div class="marquee-track">${row}${row}</div>`;
 }
 
 /* ============ каталог ============ */
@@ -191,6 +282,9 @@ const qs = new URLSearchParams(location.search);
 const catParam = qs.get("cat");
 let catData = [];
 let page = 1;
+let catUI = false;
+let rsBound = false;
+let cmpUI = false;
 
 const pageSize = () => (innerWidth <= 760 ? 15 : 30);
 
@@ -217,25 +311,31 @@ async function catInit() {
   buildFilters($("#fSheet"));
   paint();
 
-  const fab = $("#fOpen");
-  const bg = $("#sheetBg");
-  const sheet = $("#sheet");
-  const open = (v) => {
-    bg.classList.toggle("open", v);
-    sheet.classList.toggle("open", v);
-    document.body.style.overflow = v ? "hidden" : "";
-  };
-  fab.addEventListener("click", () => open(true));
-  bg.addEventListener("click", () => open(false));
+  if (!catUI) {
+    catUI = true;
+    const fab = $("#fOpen");
+    const bg = $("#sheetBg");
+    const sheet = $("#sheet");
+    const open = (v) => {
+      bg.classList.toggle("open", v);
+      sheet.classList.toggle("open", v);
+      document.body.style.overflow = v ? "hidden" : "";
+    };
+    fab.addEventListener("click", () => open(true));
+    bg.addEventListener("click", () => open(false));
+  }
 
-  let lastPs = pageSize();
-  addEventListener("resize", () => {
-    const ps = pageSize();
-    if (ps !== lastPs) {
-      lastPs = ps;
-      paint();
-    }
-  });
+  if (!rsBound) {
+    rsBound = true;
+    let lastPs = pageSize();
+    addEventListener("resize", () => {
+      const ps = pageSize();
+      if (ps !== lastPs) {
+        lastPs = ps;
+        paint();
+      }
+    });
+  }
 }
 
 function buildChips() {
@@ -667,11 +767,14 @@ async function cmpInit() {
 
   const picker = $("#picker");
 
-  picker.querySelector("[data-go]").addEventListener("click", () => {
-    const [sa, sb] = picker.querySelectorAll("select");
-    picker.querySelector("[data-go]").href = `compare.html?ids=${sa.value},${sb.value}`;
-  });
-  picker.querySelector("[data-close]").addEventListener("click", () => picker.classList.remove("open"));
+  if (!cmpUI) {
+    cmpUI = true;
+    picker.querySelector("[data-go]").addEventListener("click", () => {
+      const [sa, sb] = picker.querySelectorAll("select");
+      picker.querySelector("[data-go]").href = `compare.html?ids=${sa.value},${sb.value}`;
+    });
+    picker.querySelector("[data-close]").addEventListener("click", () => picker.classList.remove("open"));
+  }
 
   function showPicker() {
     picker.querySelectorAll("select").forEach((sel, i) => {
@@ -719,12 +822,12 @@ async function cmpInit() {
 
 /* ============ запуск ============ */
 
-cursorInit();
 fieldInit(PAGE === "device" ? "trail" : "grid");
 transInit();
 navFx();
 rippleFx();
 logoFx();
+settingsFx();
 
 if (PAGE === "home") homeInit();
 if (PAGE === "cat") catInit();

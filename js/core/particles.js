@@ -59,14 +59,14 @@ export function init(mode = "grid") {
       const py = p.y + Math.sin(t * p.sp + p.ph) * 2.4;
       ctx.beginPath();
       ctx.arc(p.x, py, 1.4, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(255, 255, 255, 0.12)";
+      ctx.fillStyle = "rgba(33, 29, 22, 0.14)";
       ctx.fill();
 
       const dx = p.x - mx;
       const dy = py - my;
       const d = Math.hypot(dx, dy);
       if (d < LINK) {
-        const a = (1 - d / LINK) * 0.3;
+        const a = (1 - d / LINK) * 0.24;
         ctx.strokeStyle = `rgba(255, 107, 53, ${a.toFixed(3)})`;
         ctx.lineWidth = 1;
         ctx.beginPath();

@@ -157,13 +157,6 @@
   to { width: 1ch; }
 }
 
-@keyframes scroll-hint {
-  0% { transform: scaleY(0); transform-origin: top; }
-  45% { transform: scaleY(1); transform-origin: top; }
-  55% { transform: scaleY(1); transform-origin: bottom; }
-  100% { transform: scaleY(0); transform-origin: bottom; }
-}
-
 @keyframes wip-cover {
   to { transform: scaleY(1); }
 }

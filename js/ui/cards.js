@@ -1,7 +1,7 @@
 import { avg } from "../data/loader.js";
+import { fmt as money } from "../data/settings.js";
 
-const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
-const fmt = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
+const fmtScore = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
 export const tint = (r) => (r < 6 ? "bad" : r < 7.5 ? "mid" : "good");
 
@@ -40,10 +40,10 @@ export function card(d, i = 0, rank = 0) {
         <span class="name">${d.name}</span>
         <span class="short">${d.short}</span>
       </span>
-      <span class="score"><b>${fmt(avg(d))}</b><i>ср. балл</i></span>
+      <span class="score"><b>${fmtScore(avg(d))}</b><i>ср. балл</i></span>
     </span>
     <span class="card-foot">
-      <span class="price"><em>0 ₴</em></span>
+      <span class="price"><em>${money(0)}</em></span>
       <span>${(d.reviews || []).length} обзоров</span>
     </span>`;
 

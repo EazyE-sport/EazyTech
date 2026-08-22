@@ -1,12 +1,56 @@
-const KEY = "et-devices-v2";
+const KEY = "et-devices-v3";
 let cache = null;
+
+export function strip(text) {
+  let out = "";
+  let i = 0;
+  let inStr = false;
+
+  while (i < text.length) {
+    const c = text[i];
+
+    if (inStr) {
+      out += c;
+      if (c === "\\") {
+        out += text[i + 1] || "";
+        i += 2;
+        continue;
+      }
+      if (c === '"') inStr = false;
+      i++;
+      continue;
+    }
+
+    if (c === '"') {
+      inStr = true;
+      out += c;
+      i++;
+      continue;
+    }
+
+    if (c === "/" && text[i + 1] === "/") {
+      while (i < text.length && text[i] !== "\n") i++;
+      continue;
+    }
+
+    if (c === "/" && text[i + 1] === "*") {
+      i = text.indexOf("*/", i) + 2;
+      continue;
+    }
+
+    out += c;
+    i++;
+  }
+
+  return out;
+}
 
 async function pull() {
   const idx = await (await fetch("data/devices/index.json")).json();
   const res = await Promise.allSettled(
-    idx.map((f) => fetch(`data/devices/${f}`).then((r) => {
+    idx.map((f) => fetch(`data/devices/${f}`).then(async (r) => {
       if (!r.ok) throw new Error(f);
-      return r.json();
+      return JSON.parse(strip(await r.text()));
     })),
   );
   return res.filter((r) => r.status === "fulfilled").map((r) => r.value);

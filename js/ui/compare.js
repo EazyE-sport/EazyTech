@@ -35,7 +35,7 @@ function scores(a, b, path, dir) {
   return [(max - va) / span * 100, (max - vb) / span * 100, va < vb, va > vb];
 }
 
-const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
+import { fmt as money } from "../data/settings.js";
 const fmt = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
 export function draw(list, a, b) {
