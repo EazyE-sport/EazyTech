@@ -21,7 +21,7 @@
     "personal": 9600000,
     "ai": 9650000
   },
-  "class": "performance",
+  "class": "balanced",
   "connection": "wired",
   "mechanism": "magnetic",
   "kolhoz": false,
