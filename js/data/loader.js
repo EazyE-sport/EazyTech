@@ -1,4 +1,6 @@
-const KEY = "et-devices-v3";
+const KEY = "et-devices-v4";
+const MANIFEST = "data/devices/index.json";
+const SKIP = ["index.json", "test-device.json"];
 let cache = null;
 
 export function strip(text) {
@@ -34,7 +36,9 @@ export function strip(text) {
     }
 
     if (c === "/" && text[i + 1] === "*") {
-      i = text.indexOf("*/", i) + 2;
+      const end = text.indexOf("*/", i);
+      if (end === -1) break;
+      i = end + 2;
       continue;
     }
 
@@ -45,8 +49,34 @@ export function strip(text) {
   return out;
 }
 
+// на github.io листинга папки нет, поэтому список файлов берём из API
+// репозитория; манифест остаётся фолбэком для локального хостинга
+async function fileList() {
+  const host = location.hostname;
+  if (host.endsWith(".github.io")) {
+    const owner = host.split(".")[0];
+    const repo = location.pathname.split("/")[1];
+    if (owner && repo) {
+      try {
+        const r = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/devices`);
+        if (r.ok) {
+          const list = await r.json();
+          const names = (Array.isArray(list) ? list : [])
+            .map((f) => f.name)
+            .filter((n) => n.endsWith(".json") && !SKIP.includes(n));
+          if (names.length) return names;
+        }
+      } catch {
+        /* API недоступен — ниже манифест */
+      }
+    }
+  }
+  const idx = await (await fetch(MANIFEST)).json();
+  return idx.filter((n) => !SKIP.includes(n));
+}
+
 async function pull() {
-  const idx = await (await fetch("data/devices/index.json")).json();
+  const idx = await fileList();
   const res = await Promise.allSettled(
     idx.map((f) => fetch(`data/devices/${f}`).then(async (r) => {
       if (!r.ok) throw new Error(f);

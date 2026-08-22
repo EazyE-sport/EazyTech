@@ -18,9 +18,9 @@ const money = fmt;
 const fmtScore = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
 const CATS = { mice: "Мыши", keyboards: "Клавиатуры", headphones: "Наушники" };
-const CLASS_L = { budget: "Дешевка", value: "Топ за свои деньги", balanced: "Цена = качество" };
+const CLASS_L = { budget: "Дешевка", value: "Топ за свои деньги", balanced: "Цена = качество", overpriced: "Оверпрайс" };
 const CONN_L = { wired: "Проводная", wireless: "Беспроводная", hybrid: "Комбинированная" };
-const MECH_L = { mechanical: "Механика", magnetic: "Магнитка", optical: "Оптическая", membrane: "Мембрана" };
+const MECH_L = { mechanical: "Механика", magnetic: "Магнитка", optical: "Оптическая", membrane: "Мембрана", dynamic: "Динамические" };
 const SCORE_L = { community: "Оценка общества", personal: "Личная оценка", ai: "Оценка ИИ" };
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -426,9 +426,10 @@ function buildFilters(box) {
   F.state.min = b.min;
   F.state.max = b.max;
 
-  const tally = (key) => {
+  const tally = (key, filter) => {
     const m = new Map();
     catData.forEach((d) => {
+      if (filter && !filter(d)) return;
       const v = d[key];
       if (v) m.set(v, (m.get(v) || 0) + 1);
     });
@@ -438,7 +439,8 @@ function buildFilters(box) {
   const brandItems = tally("brand").map(([v, n]) => [v, v, n]);
   const clsItems = tally("class").map(([v, n]) => [v, CLASS_L[v] || v, n]);
   const connItems = tally("connection").map(([v, n]) => [v, CONN_L[v] || v, n]);
-  const mechItems = tally("mechanism").map(([v, n]) => [v, MECH_L[v] || v, n]);
+  const mechItems = tally("mechanism", (d) => d.category === "keyboards")
+    .map(([v, n]) => [v, MECH_L[v] || v, n]);
 
   box.innerHTML = `
     <h3>Фильтры</h3>
