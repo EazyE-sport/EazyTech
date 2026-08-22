@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Гайд EazyTech: как выбирать клавиатуру — свитчи, форм-фактор, бренды и бюджет.">
+  <title>Как выбирать клавиатуру? — EazyTech</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f4efe5'/%3E%3Cpath d='M9 9h14v4h-10v2h8v4h-8v2h10v4H9z' fill='%23ff6b35'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css?v=12">
+  <link rel="stylesheet" href="css/animations.css?v=12">
+  <link rel="stylesheet" href="css/components.css?v=12">
+  <link rel="stylesheet" href="css/effects.css?v=12">
+  <link rel="stylesheet" href="css/responsive.css?v=12">
+</head>
+<body data-page="guide">
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="index.html">EAZYTECH</a>
+      <nav class="links">
+        <a class="nav-a" href="index.html">Главная</a>
+        <a class="nav-a" href="category.html?cat=mice">Мыши</a>
+        <a class="nav-a" href="category.html?cat=keyboards">Клавиатуры</a>
+        <a class="nav-a" href="category.html?cat=headphones">Наушники</a>
+        <a class="nav-a on" href="keyboard-guide.html">Гайд</a>
+        <a class="nav-a" href="compare.html">Сравнение</a>
+        <a class="nav-a" href="methodology.html">Методология</a>
+      </nav>
+      <button class="burger" aria-label="Меню"><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-list">
+      <a href="index.html" style="--i:0">Главная</a>
+      <a href="category.html?cat=mice" style="--i:1">Мыши</a>
+      <a href="category.html?cat=keyboards" style="--i:2">Клавиатуры</a>
+      <a href="category.html?cat=headphones" style="--i:3">Наушники</a>
+      <a href="keyboard-guide.html" style="--i:4" class="on">Гайд</a>
+      <a href="compare.html" style="--i:5">Сравнение</a>
+      <a href="methodology.html" style="--i:6">Методология</a>
+    </nav>
+  </div>
+
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <main class="page guide">
+    <div class="wrap">
+
+      <div class="sec-head" style="padding-top:24px">
+        <div>
+          <p class="idx">гайд / клавиатуры</p>
+          <h2 style="font-size:48px">Как выбирать клавиатуру?</h2>
+        </div>
+      </div>
+      <p class="guide-sub anim-rise">Клавиатуру выбирают по трём вещам: свитчи, форм-фактор и бюджет.
+        Остальное — маркетинг. Разбираем по порядку.</p>
+
+      <section class="sec">
+        <div class="sec-head">
+          <h2>Свитчи</h2>
+          <span class="idx">01</span>
+        </div>
+        <p class="guide-lead">Основных цветов семь. Они отличаются ходом, звуком и тем, для чего их брать.</p>
+        <div class="sw-grid">
+
+          <article class="sw-card sw--best reveal" data-reveal>
+            <span class="sw-badge">наш выбор</span>
+            <span class="sw-key" style="--sw:#f2c94c">A</span>
+            <div class="sw-head">
+              <h3>Жёлтые</h3>
+              <span class="sw-type">линейные</span>
+            </div>
+            <div class="sw-noise" data-lvl="2"><i></i><i></i><i></i><i></i><i></i><span>тихие</span></div>
+            <p>Самые сбалансированные: тихие, приятный тайпинг и без наценки за хайп. Если не знаешь, что брать, — бери жёлтые.</p>
+          </article>
+
+          <article class="sw-card reveal" data-reveal>
+            <span class="sw-key" style="--sw:#e74c3c">A</span>
+            <div class="sw-head">
+              <h3>Красные</h3>
+              <span class="sw-type">линейные</span>
+            </div>
+            <div class="sw-noise" data-lvl="3"><i></i><i></i><i></i><i></i><i></i><span>средне</span></div>
+            <p>Лёгкие и линейные, чаще всего стоят в дешёвых клавиатурах. Нацелены на игры — классика киберспорта.</p>
+          </article>
+
+          <article class="sw-card reveal" data-reveal>
+            <span class="sw-key" style="--sw:#2b2b2b">A</span>
+            <div class="sw-head">
+              <h3>Чёрные</h3>
+              <span class="sw-type">линейные, тяжёлые</span>
+            </div>
+            <div class="sw-noise" data-lvl="3"><i></i><i></i><i></i><i></i><i></i><span>средне</span></div>
+            <p>Линейные, но 60+ граммов на нажатие — для тех, кто лупит по клавишам. В готовых сборках встречаются редко.</p>
+          </article>
+
+          <article class="sw-card reveal" data-reveal>
+            <span class="sw-key" style="--sw:#a9744f">A</span>
+            <div class="sw-head">
+              <h3>Коричневые</h3>
+              <span class="sw-type">тактильные</span>
+            </div>
+            <div class="sw-noise" data-lvl="4"><i></i><i></i><i></i><i></i><i></i><span>громко</span></div>
+            <p>Тактильные — и для работы, и для игр. Не бюджет, но и не премиум. Минус: довольно громкие.</p>
+          </article>
+
+          <article class="sw-card reveal" data-reveal>
+            <span class="sw-key" style="--sw:#3b82f6">A</span>
+            <div class="sw-head">
+              <h3>Синие</h3>
+              <span class="sw-type">кликающие</span>
+            </div>
+            <div class="sw-noise" data-lvl="5"><i></i><i></i><i></i><i></i><i></i><span>очень громко</span></div>
+            <p>Кликающие и очень звонкие. Офис и печать — да, игры — нет: соседи по дискорду не простят.</p>
+          </article>
+
+          <article class="sw-card reveal" data-reveal>
+            <span class="sw-key" style="--sw:#f78fb3">A</span>
+            <div class="sw-head">
+              <h3>Розовые</h3>
+              <span class="sw-type">линейные, с демпферами</span>
+            </div>
+            <div class="sw-noise" data-lvl="1"><i></i><i></i><i></i><i></i><i></i><span>почти бесшумные</span></div>
+            <p>Как красные, но с демпферами по бокам — почти бесшумные. Тихий тайпинг: работа и игры без грохота.</p>
+          </article>
+
+          <article class="sw-card reveal" data-reveal>
+            <span class="sw-key" style="--sw:#f4f4f4">A</span>
+            <div class="sw-head">
+              <h3>Белые</h3>
+              <span class="sw-type">зависят от бренда</span>
+            </div>
+            <div class="sw-noise" data-lvl="5"><i></i><i></i><i></i><i></i><i></i><span>громко</span></div>
+            <p>Cherry MX White — тяжёлый громкий клик. Kailh Box White — звонкие, но быстрые и короткие. Берут немногие: слишком шумные.</p>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-head">
+          <h2>Бренды свитчей</h2>
+          <span class="idx">02</span>
+        </div>
+        <p class="guide-lead">Свитч решает бренд. Этим можно верить:</p>
+        <div class="brand-chips">
+          <span class="brand-chip reveal" data-reveal>Gateron</span>
+          <span class="brand-chip reveal" data-reveal>Keygeek</span>
+          <span class="brand-chip reveal" data-reveal>HMX</span>
+          <span class="brand-chip reveal" data-reveal>Cherry MX</span>
+          <span class="brand-chip reveal" data-reveal>Kailh</span>
+          <span class="brand-chip reveal" data-reveal>Gazzew</span>
+          <span class="brand-chip reveal" data-reveal>Reaper</span>
+        </div>
+        <p class="guide-note">Если на борту они — свитчи скорее всего ок. Нонейм-«оптики» в дешёвых сборках — лотерея.</p>
+      </section>
+
+      <section class="sec">
+        <div class="sec-head">
+          <h2>Форм-фактор</h2>
+          <span class="idx">03</span>
+        </div>
+        <p class="guide-lead">В 2026 году король всё ещё <b>75%</b>: тильда, F1–F12 и стрелки на месте,
+          а бонусом туда часто пихают экранчики и роллеры.</p>
+        <div class="ff-grid">
+          <div class="ff-card reveal" data-reveal>
+            <div class="ff-vis" style="--k:61"></div>
+            <h3>60%</h3>
+            <p>Минимум места на столе. Нет стрелок и F-ряда.</p>
+          </div>
+          <div class="ff-card reveal" data-reveal>
+            <div class="ff-vis" style="--k:68"></div>
+            <h3>65%</h3>
+            <p>Стрелки есть, F-ряда нет.</p>
+          </div>
+          <div class="ff-card ff--best reveal" data-reveal>
+            <span class="sw-badge">король 2026</span>
+            <div class="ff-vis" style="--k:84"></div>
+            <h3>75%</h3>
+            <p>Тильда · F1–F12 · стрелки · место под экранчики и роллеры. Всё нужное, ничего лишнего.</p>
+          </div>
+          <div class="ff-card reveal" data-reveal>
+            <div class="ff-vis" style="--k:88"></div>
+            <h3>TKL</h3>
+            <p>Всё, кроме нампада. Для тех, кто не готов терять клавиши.</p>
+          </div>
+          <div class="ff-card reveal" data-reveal>
+            <div class="ff-vis" style="--k:104"></div>
+            <h3>Full</h3>
+            <p>Полный формат с нампадом. Работа с цифрами — без компромиссов.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec">
+        <div class="sec-head">
+          <h2>Бюджет</h2>
+          <span class="idx">04</span>
+        </div>
+        <p class="guide-lead">Если бюджет ограничен четырьмя тысячами гривен — эти бренды дают максимум за деньги:</p>
+        <div class="brand-chips">
+          <a class="brand-chip reveal" data-reveal href="category.html?cat=keyboards">Ajazz</a>
+          <a class="brand-chip reveal" data-reveal href="category.html?cat=keyboards">Cidoo</a>
+          <a class="brand-chip reveal" data-reveal href="category.html?cat=keyboards">Attack Shark</a>
+          <a class="brand-chip reveal" data-reveal href="category.html?cat=keyboards">GamePro</a>
+        </div>
+        <p class="guide-note">Всё остальное в этой цене — обычно колхоз.</p>
+        <a class="btn btn--acc" href="category.html?cat=keyboards">Смотреть клавиатуры в каталоге →</a>
+      </section>
+
+      <section class="sec">
+        <p class="guide-outro reveal" data-reveal>Всё ещё не решил? Загляни в
+          <a class="lnk" href="methodology.html">Методологию</a> — там про то, как мы считаем оценки,
+          а в <a class="lnk" href="compare.html">Сравнении</a> можно столкнуть две клавиатуры лбами.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span class="mono">EAZYTECH © 2026</span>
+      <span>Цены — ориентир, решения — твои</span>
+      <a class="lnk" href="methodology.html">Методология</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js?v=12"></script>
+</body>
+</html>

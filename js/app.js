@@ -875,4 +875,4 @@ if (PAGE === "home") homeInit();
 if (PAGE === "cat") catInit();
 if (PAGE === "device") devInit();
 if (PAGE === "cmp") cmpInit();
-if (PAGE === "method") scroll.init();
+if (PAGE === "method" || PAGE === "guide") scroll.init();
