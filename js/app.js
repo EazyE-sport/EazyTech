@@ -545,7 +545,7 @@ function buildFilters(box) {
     </div>
     <p class="f-count">Показано <b data-num>${catData.length}</b> из ${catData.length}</p>
     <button class="btn btn--ghost" data-reset>Сброс</button>
-    <button class="btn btn--acc f-apply" data-apply>Показать <b data-apply-n>${catData.length}</b></button>`;
+    <button class="btn btn--acc f-apply" data-apply>Применить · <b data-apply-n>${catData.length}</b></button>`;
 
   bindGroup(box);
 }
