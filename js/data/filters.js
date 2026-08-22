@@ -6,6 +6,7 @@ export const state = {
   cls: [],
   conn: [],
   mech: [],
+  q: "",
   score: 0,
   min: 0,
   max: Infinity,
@@ -17,6 +18,7 @@ export function reset() {
   state.cls = [];
   state.conn = [];
   state.mech = [];
+  state.q = "";
   state.score = 0;
   state.min = 0;
   state.max = Infinity;
@@ -24,6 +26,7 @@ export function reset() {
 }
 
 export function apply(list) {
+  const q = state.q ? state.q.toLowerCase() : "";
   return list.filter((d) => {
     if (state.cat && d.category !== state.cat) return false;
     if (state.brands.length && !state.brands.includes(d.brand)) return false;
@@ -33,6 +36,10 @@ export function apply(list) {
     if (d.price < state.min || d.price > state.max) return false;
     if (avg(d) < state.score) return false;
     if (state.deal && d.price > d.fairPrice) return false;
+    if (q) {
+      const hay = `${d.name || ""} ${d.brand || ""}`.toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
     return true;
   });
 }

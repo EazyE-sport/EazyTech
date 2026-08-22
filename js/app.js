@@ -292,6 +292,7 @@ let catUI = false;
 let rsBound = false;
 let cmpUI = false;
 let catBounds = { min: 0, max: Infinity };
+let searchBound = false;
 
 const pageSize = () => (innerWidth <= 760 ? 15 : 30);
 
@@ -304,6 +305,7 @@ function filtersFromUrl() {
   F.state.conn = split(p.get("conn"));
   F.state.mech = split(p.get("mech"));
   F.state.deal = p.get("deal") === "1";
+  F.state.q = p.get("q") || "";
   F.state.score = p.get("score") ? +p.get("score") : 0;
   F.state.min = p.get("min") ? +p.get("min") : catBounds.min;
   F.state.max = p.get("max") ? +p.get("max") : catBounds.max;
@@ -318,11 +320,28 @@ function urlFromFilters() {
   if (F.state.conn.length) p.set("conn", F.state.conn.join(","));
   if (F.state.mech.length) p.set("mech", F.state.mech.join(","));
   if (F.state.deal) p.set("deal", "1");
+  if (F.state.q) p.set("q", F.state.q);
   if (F.state.min > catBounds.min) p.set("min", F.state.min);
   if (F.state.max < catBounds.max) p.set("max", F.state.max);
   if (F.state.score > 0) p.set("score", F.state.score);
   const qs = p.toString();
   history.replaceState(null, "", qs ? `category.html?${qs}` : "category.html");
+}
+
+// поле поиска: мгновенная фильтрация по названию/бренду + синхронизация с URL
+function bindSearch() {
+  const search = $("#search");
+  if (!search) return;
+  search.value = F.state.q;
+  if (searchBound) return;
+  searchBound = true;
+  let t;
+  search.addEventListener("input", () => {
+    F.state.q = search.value.trim();
+    page = 1;
+    clearTimeout(t);
+    t = setTimeout(paint, 180);
+  });
 }
 
 async function catInit() {
@@ -349,6 +368,7 @@ async function catInit() {
   buildFilters($("#fSide"));
   buildFilters($("#fSheet"));
   paint();
+  bindSearch();
 
   if (!catUI) {
     catUI = true;

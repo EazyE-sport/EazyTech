@@ -603,6 +603,34 @@
   background: var(--glow);
 }
 
+/* поиск в каталоге */
+
+.cat-search {
+  margin-bottom: 16px;
+}
+
+.cat-search input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--bg-2);
+  color: var(--txt);
+  font-family: var(--f-m);
+  font-size: 14px;
+  transition: border-color var(--f2) var(--e-out), box-shadow var(--f2) var(--e-out);
+}
+
+.cat-search input:focus {
+  outline: none;
+  border-color: var(--acc);
+  box-shadow: 0 0 0 3px var(--glow);
+}
+
+.cat-search input::placeholder {
+  color: var(--txt-2);
+}
+
 /* ============ пагинатор ============ */
 
 .pager {
