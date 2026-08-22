@@ -344,6 +344,19 @@ function bindSearch() {
   });
 }
 
+// чтобы высокая «липкая» панель фильтров не тянула за собой пустое место
+// снизу на страницах с малым числом карточек — ограничиваем её высоту
+// высотой колонки с контентом (но не больше экрана)
+function fitSidebar() {
+  const side = $("#fSide");
+  if (!side) return;
+  const content = side.nextElementSibling;
+  if (!content) return;
+  const ch = content.offsetHeight;
+  if (ch <= 0) return;
+  side.style.maxHeight = Math.min(innerHeight - 120, ch) + "px";
+}
+
 async function catInit() {
   try {
     catData = await all();
@@ -393,6 +406,7 @@ async function catInit() {
         lastPs = ps;
         paint();
       }
+      fitSidebar();
     });
   }
 }
@@ -438,6 +452,7 @@ function paint() {
     cards.render(grid, slice, ranks(catData));
     $("#fEmpty").hidden = visible.length > 0;
     renderPager(visible.length, page, pages, ps);
+    fitSidebar();
   }, 240);
 }
 
