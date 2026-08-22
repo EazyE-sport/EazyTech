@@ -34,7 +34,6 @@ export function card(d, i = 0, rank = 0) {
   el.innerHTML = `
     <span class="glare"></span>
     <span class="tags">${tags(d)}</span>
-    ${tagTop(rank)}
     <span class="thumb">${thumb(d)}</span>
     <span class="card-body">
       <span>
@@ -46,7 +45,8 @@ export function card(d, i = 0, rank = 0) {
     <span class="card-foot">
       <span class="price"><em>${money(0)}</em></span>
       <span class="foot-right">
-        <span>${(d.reviews || []).length} обзоров</span>
+        ${tagTop(rank)}
+        <span class="rev-count">${(d.reviews || []).length} обзоров</span>
         <button class="card-cart" aria-label="В корзину">+</button>
       </span>
     </span>`;

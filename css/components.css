@@ -666,25 +666,20 @@
 /* ============ ранг на карточке ============ */
 
 .rank {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 2;
   font-family: var(--f-m);
   font-size: 11px;
   letter-spacing: 0.08em;
-  padding: 4px 9px;
-  border: 1px solid rgba(33, 29, 22, 0.28);
+  padding: 3px 8px;
+  border: 1px solid rgba(255, 107, 53, 0.35);
   border-radius: 2px;
-  background: rgba(251, 248, 240, 0.85);
-  backdrop-filter: blur(6px);
-  color: var(--txt-2);
+  background: var(--glow);
+  color: var(--acc);
+  white-space: nowrap;
 }
 
 .rank--hi {
-  color: var(--acc);
-  border-color: rgba(255, 107, 53, 0.55);
-  box-shadow: 0 0 14px var(--glow);
+  font-weight: 700;
+  box-shadow: 0 0 10px var(--glow);
 }
 
 /* средний балл на карточке */

@@ -558,7 +558,13 @@ function buildScores(box, d, r) {
       <span class="s-lab">Средний балл</span>
       <span class="s-avg">${fmtScore(avg(d))}</span>
     </div>
-    ${r ? `<p class="s-rank">ТОП ${r.c} из ${r.cN} в «${CATS[d.category]}» · ${r.g} из ${r.gN} в общем зачёте</p>` : ""}`;
+    ${r ? `<p class="s-rank">${rankLine(r, d)}</p>` : ""}`;
+}
+
+function rankLine(r, d) {
+  const cat = r.c <= 100 ? `ТОП ${r.c}` : `${r.c}`;
+  const glob = r.g <= 100 ? `ТОП ${r.g}` : `${r.g}`;
+  return `${cat} из ${r.cN} в «${CATS[d.category]}» · ${glob} из ${r.gN} в общем зачёте`;
 }
 
 async function devInit() {
