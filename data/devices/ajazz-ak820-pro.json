@@ -5,7 +5,7 @@
   "category": "keyboards",
 
   "images": [
-  "https://content2.rozetka.com.ua/goods/images/big/588869759.jpg"
+  "https://content2.rozetka.com.ua/goods/images/big/588869759.jpg",
   "https://buytoday.com.ua/wp-content/uploads/buytoday_Ajazz-AK820-Pro.jpg"
 ],
 
@@ -71,7 +71,7 @@
     {
       "name": "pcboost.com.ua СКИДКА",
       "price": 2499
-    },
+    }
    ],
   "pros": [
     "Компактный формат 75%",

@@ -1,5 +1,6 @@
 import { avg } from "../data/loader.js";
 import { fmt as money } from "../data/settings.js";
+import { add as cartAdd } from "./cart.js";
 
 const fmtScore = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
@@ -44,7 +45,10 @@ export function card(d, i = 0, rank = 0) {
     </span>
     <span class="card-foot">
       <span class="price"><em>${money(0)}</em></span>
-      <span>${(d.reviews || []).length} обзоров</span>
+      <span class="foot-right">
+        <span>${(d.reviews || []).length} обзоров</span>
+        <button class="card-cart" aria-label="В корзину">+</button>
+      </span>
     </span>`;
 
   const img = el.querySelector("img");
@@ -56,6 +60,12 @@ export function card(d, i = 0, rank = 0) {
       }));
     });
   }
+
+  el.querySelector(".card-cart").addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    cartAdd(d.id);
+  });
 
   tilt(el);
   return el;

@@ -8,6 +8,8 @@ import * as cards from "./ui/cards.js";
 import { draw as radarDraw } from "./ui/radar-chart.js";
 import { draw as chartDraw } from "./ui/price-chart.js";
 import { draw as cmpDraw, type as typeOut } from "./ui/compare.js";
+import { toast } from "./ui/toast.js";
+import * as cart from "./ui/cart.js";
 
 const PAGE = document.body.dataset.page;
 const CALM = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -22,20 +24,6 @@ const MECH_L = { mechanical: "Механика", magnetic: "Магнитка", o
 const SCORE_L = { community: "Оценка общества", personal: "Личная оценка", ai: "Оценка ИИ" };
 
 const $ = (s, r = document) => r.querySelector(s);
-
-/* ---------- тост ---------- */
-
-const toastEl = document.createElement("div");
-toastEl.className = "toast";
-document.body.append(toastEl);
-let toastTimer;
-
-function toast(msg) {
-  toastEl.textContent = msg;
-  toastEl.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2400);
-}
 
 /* ---------- сравнение ---------- */
 
@@ -634,7 +622,8 @@ async function devInit() {
           ${fair}
         </div>
         <div class="dev-actions">
-          <a class="btn btn--acc" href="compare.html?ids=${d.id}">В сравнение →</a>
+          <button class="btn btn--acc" id="cartBtn">В корзину</button>
+          <a class="btn btn--ghost" href="compare.html?ids=${d.id}">В сравнение →</a>
           <button class="btn btn--ghost" id="cmpBtn"></button>
         </div>
       </div>
@@ -701,8 +690,7 @@ async function devInit() {
 
   const btn = $("#cmpBtn");
   const has = cmpList().includes(d.id);
-  btn.textContent = has ? "В сравнении ✓" : "+ Добавить к сравнению";
-  btn.addEventListener("click", () => {
+  btn.textContent = has ? "В сравнении ✓" : "+ Добавить к сравнению";  btn.addEventListener("click", () => {
     const l = cmpList();
     if (l.includes(d.id)) {
       cmpSave(l.filter((x) => x !== d.id));
@@ -715,6 +703,17 @@ async function devInit() {
       btn.textContent = "В сравнении ✓";
       toast("В сравнении — жми «Сравнение» в меню");
     }
+  });
+
+  const cbtn = $("#cartBtn");
+  const cartLabel = () => {
+    const n = cart.qty(d.id);
+    cbtn.textContent = n ? `В корзине ✓ ×${n}` : "В корзину";
+  };
+  cartLabel();
+  cbtn.addEventListener("click", () => {
+    cart.add(d.id);
+    cartLabel();
   });
 
   const img = $("#heroImg");
@@ -828,6 +827,7 @@ navFx();
 rippleFx();
 logoFx();
 settingsFx();
+cart.init(all);
 
 if (PAGE === "home") homeInit();
 if (PAGE === "cat") catInit();

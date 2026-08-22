@@ -1995,3 +1995,201 @@ input[type="range"]::-moz-range-thumb {
   color: var(--acc);
   margin-left: 10px;
 }
+
+/* ============ корзина ============ */
+
+.cart-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  color: var(--txt-2);
+  transition: color var(--f2) var(--e-out), transform var(--f2) var(--e-out);
+}
+
+.cart-btn:hover {
+  color: var(--txt);
+  transform: translateY(-2px);
+}
+
+.cart-badge {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 8px;
+  background: var(--acc);
+  color: #fff;
+  font-family: var(--f-m);
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.cart-box {
+  width: min(560px, 100%);
+}
+
+.cart-list {
+  display: grid;
+  gap: 10px;
+  max-height: 52vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.cart-empty {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 44px 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 4px 4px;
+  background: var(--bg);
+}
+
+.ci-thumb {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--bg-3);
+  font-family: var(--f-h);
+  font-size: 15px;
+  color: var(--txt-2);
+}
+
+.ci-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ci-info {
+  display: grid;
+  gap: 2px;
+}
+
+.ci-info .lnk {
+  font-size: 13px;
+  justify-self: start;
+}
+
+.ci-price {
+  font-family: var(--f-m);
+  font-size: 12px;
+  color: var(--txt-2);
+}
+
+.ci-price b {
+  color: var(--txt);
+  font-weight: 500;
+}
+
+.ci-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--f-m);
+  font-size: 13px;
+}
+
+.ci-qty button {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--txt-2);
+  transition: color var(--f2) var(--e-out), border-color var(--f2) var(--e-out);
+}
+
+.ci-qty button:hover {
+  color: var(--txt);
+  border-color: rgba(255, 107, 53, 0.5);
+}
+
+.ci-del {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+  font-size: 16px;
+  color: var(--txt-2);
+  transition: color var(--f2) var(--e-out), background var(--f2) var(--e-out);
+}
+
+.ci-del:hover {
+  color: var(--bad);
+  background: rgba(255, 46, 99, 0.08);
+}
+
+.cart-foot {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--f-m);
+  font-size: 15px;
+}
+
+.cart-total b {
+  color: var(--acc);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cart-acts {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.card-cart {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--txt-2);
+  font-size: 15px;
+  line-height: 1;
+  transition: color var(--f2) var(--e-out), border-color var(--f2) var(--e-out),
+    background var(--f2) var(--e-out);
+}
+
+.card-cart:hover {
+  color: var(--acc);
+  border-color: var(--acc);
+  background: var(--glow);
+}
+
+.foot-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
