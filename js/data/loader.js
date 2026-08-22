@@ -50,7 +50,9 @@ export function strip(text) {
 }
 
 // на github.io листинга папки нет, поэтому список файлов берём из API
-// репозитория; манифест остаётся фолбэком для локального хостинга
+// репозитория; манифест остаётся фолбэком для локального хостинга.
+// ?t= и no-store обязательны: Pages отдаёт статику с кешем 10 минут,
+// без них новые файлы устройств видны не сразу
 async function fileList() {
   const host = location.hostname;
   if (host.endsWith(".github.io")) {
@@ -58,7 +60,10 @@ async function fileList() {
     const repo = location.pathname.split("/")[1];
     if (owner && repo) {
       try {
-        const r = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/data/devices`);
+        const r = await fetch(
+          `https://api.github.com/repos/${owner}/${repo}/contents/data/devices?t=${Date.now()}`,
+          { cache: "no-store" },
+        );
         if (r.ok) {
           const list = await r.json();
           const names = (Array.isArray(list) ? list : [])
@@ -71,14 +76,14 @@ async function fileList() {
       }
     }
   }
-  const idx = await (await fetch(MANIFEST)).json();
+  const idx = await (await fetch(`${MANIFEST}?t=${Date.now()}`, { cache: "no-store" })).json();
   return idx.filter((n) => !SKIP.includes(n));
 }
 
 async function pull() {
   const idx = await fileList();
   const res = await Promise.allSettled(
-    idx.map((f) => fetch(`data/devices/${f}`).then(async (r) => {
+    idx.map((f) => fetch(`data/devices/${f}?t=${Date.now()}`, { cache: "no-store" }).then(async (r) => {
       if (!r.ok) throw new Error(f);
       return JSON.parse(strip(await r.text()));
     })),
