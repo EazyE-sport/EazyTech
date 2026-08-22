@@ -1,0 +1,105 @@
+{
+  "id": "atk-rs7-v2-aluminum-hall-effect",
+  "name": "Клавиатура ATK RS7 V2 Aluminum Hall Effect",
+  "brand": "ATK",
+  "category": "keyboards",
+  "images": [
+    "https://www.atk.store/cdn/shop/files/RS7-2.jpg?v=1776336057&width=1500",
+    "https://www.atk.store/cdn/shop/files/RS7-6.jpg?v=1755502068&width=1500",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsgMjlSinEveXWvzS6mcQf_Shl0dQj3MDFEAY4wtxrPQ&s",
+    "https://halleffectkeyboard.com/wp-content/uploads/2025/09/ATK-RS7-V2-Black-Blazeblade-1200x1200.png",
+    "https://lethal.gg/cdn/shop/files/atk-rs7-silver-05.jpg?v=1778595230&width=1300",
+    "https://www.atk.store/cdn/shop/files/1.jpg"
+  ],
+  "short": "Флагманская магнитная игровая клавиатура формата 75% в алюминиевом корпусе с поддержкой Rapid Trigger и частотой сканирования 256K Hz.",
+  "description": "ATK RS7 V2 Aluminum Hall Effect - король киберспортивных девайсов бренда. В мире шутеров (CS2, Valorant, Apex) эти клавиатуры ценятся даже выше аналогов от Wooting благодаря передовым магнитным свитчам на эффекте Холла, частоте сканирования до 256 000 Гц и рекордному времени отклика 0.08 мс.\n\nКорпус выполнен из цельного фрезерованного алюминия с 6-слойной шумоизоляцией, обеспечивающей глубокий и приятный звук тайпинга.",
+  "price": 6200,
+  "fairPrice": 7500,
+  "scores": {
+    "community": 9800000,
+    "personal": 9900000,
+    "ai": 9850000
+  },
+  "class": "premium",
+  "connection": "wired",
+  "mechanism": "magnetic",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "EazyTech Review",
+      "score": 9.9,
+      "date": "2026-06-01",
+      "text": "Лучшая магнитная клавиатура на рынке. Rapid Trigger работает безупречно, алюминиевый корпус ощущается премиально."
+    }
+  ],
+  "specs": {
+    "Тип переключателей": "Магнитные Hall Effect (Crystal Blade / Leviatan Ultra)",
+    "Частота опроса": "8000 Hz (8K)",
+    "Частота сканирования": "До 256 000 Гц (Extreme Mode)",
+    "Задержка ввода": "0.08 мс",
+    "Функции": "Rapid Trigger (от 0.001 мм), SOCD, Dynamic Deadzone",
+    "Форм-фактор": "75% (81 клавиша)",
+    "Корпус": "Цельный фрезерованный алюминий (CNC)",
+    "Шумоизоляция": "6-слойная (PORON, IXPE, EPDM)"
+  },
+  "shops": [
+    {
+      "name": "Розетка / Локальные магазины (скидка)",
+      "price": 6200
+    },
+    {
+      "name": "Розетка / Локальные магазины (стандарт)",
+      "price": 7999
+    },
+    {
+      "name": "DNS / Региональная розница (стандарт)",
+      "price": "9500RUB"
+    },
+    {
+      "name": "Ozon (скидка)",
+      "price": "6500RUB"
+    },
+    {
+      "name": "Ozon (стандарт)",
+      "price": "9000RUB"
+    },
+    {
+      "name": "Официальный сайт (скидка)",
+      "price": "$139"
+    },
+    {
+      "name": "Официальный сайт (стандарт)",
+      "price": "$199"
+    }
+  ],
+  "pros": [
+    "Реальный буст в шутерах благодаря функции Rapid Trigger для моментальных остановок",
+    "Премиальный алюминиевый корпус с монолитной конструкцией",
+    "Тончайшая кастомизация хода и мертвых зон каждой клавиши через веб-интерфейс ATK Hub",
+    "Рекордная частота сканирования 256K Hz и задержка всего 0.08 мс"
+  ],
+  "cons": [
+    "Цена версии RS7 V2 в алюминии выше пластиковых аналогов",
+    "Только проводное подключение ради стабильных 8K Гц и нулевой задержки",
+    "Требуется время на привыкание из-за ультрабыстрого срабатывания и чувствительности свитчей"
+  ],
+  "life": {
+    "months": 60,
+    "risk": 10,
+    "riskLabel": "Минимальный износ благодаря бесконтактным магнитным датчикам.",
+    "fail": 20,
+    "failLabel": "Потенциальный износ платы или разъема Type-C."
+  },
+  "bench": {
+    "input": 10.0,
+    "ergo": 9.4,
+    "materials": 9.9,
+    "features": 10.0,
+    "reliability": 9.5,
+    "support": 8.8,
+    "build": 9.9,
+    "software": 9.6,
+    "value": 9.4,
+    "feel": 9.9
+  }
+}
