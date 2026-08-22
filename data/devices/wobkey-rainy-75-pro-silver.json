@@ -1,0 +1,95 @@
+{
+  "id": "wobkey-rainy-75-pro-silver",
+  "name": "WOBKEY Rainy 75 PRO Silver",
+  "brand": "WOBKEY",
+  "category": "keyboards",
+  "images": [
+    "https://pcboost.com.ua/content/images/2/1500x1500l80mc0/klaviatura-wobkey-rainy-75-pro-silver-33785109211192.webp",
+    "https://pcboost.com.ua/content/images/2/1500x1500l80mc0/klaviatura-wobkey-rainy-75-pro-silver-75104317520266.webp",
+    "https://pcboost.com.ua/content/images/2/800x800l80mc0/klaviatura-wobkey-rainy-75-pro-silver-45823432803005.webp",
+    "https://pcboost.com.ua/content/images/2/800x800l80mc0/klaviatura-wobkey-rainy-75-pro-silver-98759482173373.webp",
+    "https://pcboost.com.ua/content/images/2/1500x1001l80mc0/klaviatura-wobkey-rainy-75-pro-silver-58421021790465.webp",
+    "https://pcboost.com.ua/content/images/2/800x800l80mc0/klaviatura-wobkey-rainy-75-pro-silver-53327291295126.webp",
+    "https://pcboost.com.ua/content/images/2/800x800l80mc0/klaviatura-wobkey-rainy-75-pro-silver-23885307387728.webp"
+  ],
+  "short": "Премиальная тяжелая алюминиевая клавиатура 75% с 5 слоями шумоизоляции и аккумулятором 7000 мАч.",
+  "description": "WOBKEY Rainy 75 PRO Silver — это премиальная механическая клавиатура в прочном алюминиевом корпусе общим весом около 2 кг. Модель оснащена тихими линейными переключателями Kailh Cocoa, PBT-кейкапами двойного литья, 5 слоями шумоизоляции и емким аккумулятором на 7000 мАч. Поддерживает проводное подключение и радиоканал через донгл.",
+  "price": 2705,
+  "fairPrice": 7000,
+  "scores": {
+    "community": 9800000,
+    "personal": 9600000,
+    "ai": 9700000
+  },
+  "class": "enthusiast",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Акустический гуру",
+      "score": 9.8,
+      "date": "2026-08-22",
+      "text": "Невероятный монолитный вес в 2 кг, потрясающий тихий звук печати благодаря свитчам Kailh Cocoa и 5 слоям шумоизоляции."
+    }
+  ],
+  "specs": {
+    "Формат": "75% (81 клавиша)",
+    "Корпус": "Алюминий (Вес ~2 кг)",
+    "Тип переключателей": "Kailh Cocoa (Линейные, тихие)",
+    "Подключение": "Bluetooth, 2.4 ГГц (донгл), USB",
+    "Аккумулятор": "7000 мАч",
+    "Шумоизоляция": "5 слоев",
+    "Кейкапы": "PBT Double-shot",
+    "Размеры": "32 x 14 x 4 см"
+  },
+  "shops": [
+    {
+      "name": "Ozon (Официальный партнер)",
+      "price": 2705,
+      "currency": "UAH",
+      "rubPrice": 6222
+    },
+    {
+      "name": "Rozetka (Скидка)",
+      "price": 7490
+    },
+    {
+      "name": "Rozetka (Стандарт)",
+      "price": 7990
+    },
+    {
+      "name": "vusa.org.ua",
+      "price": 8799
+    }
+  ],
+  "pros": [
+    "Тяжелый и надежный алюминиевый корпус (~2 кг)",
+    "Отличная 5-слойная шумоизоляция и тихий звук (Kailh Cocoa)",
+    "Емкий аккумулятор на 7000 мАч",
+    "Премиальные PBT даблшот кейкапы"
+  ],
+  "cons": [
+    "Высокая стоимость в локальных магазинах Украины",
+    "Для покупки по лучшей цене нужно заказывать через Ozon"
+  ],
+  "life": {
+    "months": 60,
+    "risk": 3,
+    "riskLabel": "Минимальный риск (премиум сборка)",
+    "fail": 80,
+    "failLabel": "Аккумулятор"
+  },
+  "bench": {
+    "input": 9.8,
+    "ergo": 9.2,
+    "materials": 9.9,
+    "features": 9.0,
+    "reliability": 9.5,
+    "support": 9.0,
+    "build": 9.8,
+    "software": 8.8,
+    "value": 8.9,
+    "feel": 9.9
+  }
+}
