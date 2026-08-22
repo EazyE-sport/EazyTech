@@ -1,0 +1,34 @@
+/* канвас-фон */
+
+#field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 3D tilt */
+
+.tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.tilt .pop {
+  transform: translateZ(24px);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .card {
+    transform: none;
+  }
+
+  .card:active {
+    transform: scale(0.98);
+    box-shadow: none;
+  }
+
+  .thumb img {
+    transform: translate(-50%, -50%);
+  }
+}

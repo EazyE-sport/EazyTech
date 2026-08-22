@@ -1,0 +1,77 @@
+{
+  "id": "keychron-k10-he-standard",
+  "name": "Keychron K10 HE Standard Edition",
+  "brand": "Keychron",
+  "category": "keyboards",
+  "images": [
+    "https://www.keychron.com/cdn/shop/files/Keychron-K10-HE-Swappable-RGB-Backlight-Aluminum-Nebula-Switch-Standard-Version-Black.jpg?v=1750749059&width=1214",
+    "https://optim.tildacdn.one/stor6433-6638-4636-b939-653938333033/-/format/webp/89500104.jpg.webp",
+    "https://optim.tildacdn.one/stor3034-3532-4763-b965-313239363335/-/format/webp/70268321.jpg.webp"
+  ],
+  "short": "Полноразмерная клавиатура на магнитных переключателях Hall Effect с поддержкой Rapid Trigger.",
+  "description": "Keychron K10 HE Standard Edition - это полноразмерная механическая клавиатура (100% формат), оснащенная инновационными магнитными переключателями Hall Effect Gateron Double-Rail Magnetic Nebula. Благодаря технологии магнитного отклика, клавиатура поддерживает функции Rapid Trigger и настройку точки срабатывания, что дает преимущество в соревновательных играх.\n\nМодель предлагает беспроводное подключение через Bluetooth 5.1 и радиомодуль 2.4 ГГц, а также качественные кейкапы из PBT-пластика с профилем OSA. Корпус выполнен из прочного ABS-пластика. Важно учитывать, что клавиатура поддерживает только магнитные переключатели типа Hall Effect.",
+  "price": 7100,
+  "fairPrice": 6800,
+  "scores": {
+    "community": 9400000,
+    "personal": 9300000,
+    "ai": 9350000
+  },
+  "class": "balanced",
+  "connection": "hybrid",
+  "mechanism": "magnetic",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Геймер",
+      "score": 9.3,
+      "date": "2026-08-22",
+      "text": "Магнитные переключатели меняют правила игры в шутерах. Удобный полноразмерный формат."
+    }
+  ],
+  "specs": {
+    "Формат": "100% (Полноразмерная)",
+    "Корпус": "ABS Plastic",
+    "Тип переключателей": "Gateron Double-Rail Magnetic Nebula (Hall Effect)",
+    "Подключение": "2.4 ГГц, Bluetooth 5.1, провод",
+    "Кейкапы": "Double-Shot OSA PBT",
+    "Вес": "1100 г",
+    "Софт": "Keychron Launcher / Web GUI"
+  },
+  "shops": [
+    {
+      "name": "Funkeys",
+      "price": 7100
+    }
+  ],
+  "pros": [
+    "Магнитные переключатели Hall Effect с Rapid Trigger",
+    "Полноразмерный форм-фактор",
+    "Стабильное беспроводное подключение",
+    "Качественные PBT кейкапы"
+  ],
+  "cons": [
+    "Корпус из пластика",
+    "Несовместимость с обычными механическими свитчами",
+    "Базовая цена не включает доп. услуги (гравировка, смазка)"
+  ],
+  "life": {
+    "months": 24,
+    "risk": 10,
+    "riskLabel": "Износ магнитных датчиков (редко)",
+    "fail": 48,
+    "failLabel": "Проблемы с контроллером"
+  },
+  "bench": {
+    "input": 9.5,
+    "ergo": 9.0,
+    "materials": 7.5,
+    "features": 9.6,
+    "reliability": 8.8,
+    "support": 9.0,
+    "build": 8.5,
+    "software": 9.2,
+    "value": 9.0,
+    "feel": 9.3
+  }
+}

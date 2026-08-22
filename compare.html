@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <script>try{var t=localStorage.getItem('et-theme');if(!t&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Сравнение двух устройств: параметры, победители, вердикт.">
+  <title>Сравнение — EazyTech</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f4efe5'/%3E%3Cpath d='M9 9h14v4h-10v2h8v4h-8v2h10v4H9z' fill='%23ff6b35'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css?v=33">
+  <link rel="stylesheet" href="css/animations.css?v=33">
+  <link rel="stylesheet" href="css/components.css?v=33">
+  <link rel="stylesheet" href="css/effects.css?v=33">
+  <link rel="stylesheet" href="css/responsive.css?v=33">
+</head>
+<body data-page="cmp">
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="index.html">EAZYTECH</a>
+      <nav class="links">
+        <a class="nav-a" href="index.html">Главная</a>
+        <a class="nav-a" href="category.html?cat=mice">Мыши</a>
+        <a class="nav-a" href="category.html?cat=keyboards">Клавиатуры</a>
+        <a class="nav-a" href="category.html?cat=headphones">Наушники</a>
+        <a class="nav-a on" href="compare.html">Сравнение</a>
+        <a class="nav-a" href="keyboard-guide.html">Гайд</a>
+        <a class="nav-a" href="methodology.html">Методология</a>
+      </nav>
+      <button class="burger" aria-label="Меню"><i></i><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <nav class="menu-list">
+      <a href="index.html" style="--i:0">Главная</a>
+      <a href="category.html?cat=mice" style="--i:1">Мыши</a>
+      <a href="category.html?cat=keyboards" style="--i:2">Клавиатуры</a>
+      <a href="category.html?cat=headphones" style="--i:3">Наушники</a>
+      <a href="compare.html" style="--i:4" class="on">Сравнение</a>
+      <a href="keyboard-guide.html" style="--i:5">Гайд</a>
+      <a href="methodology.html" style="--i:6">Методология</a>
+    </nav>
+  </div>
+
+  <canvas id="field" aria-hidden="true"></canvas>
+
+  <main class="page">
+    <div class="wrap" id="cmpRoot">
+      <div class="skel" style="height:160px; margin-top:32px"></div>
+      <div class="skel" style="height:320px; margin-top:20px"></div>
+    </div>
+  </main>
+
+  <div class="picker" id="picker" role="dialog" aria-modal="true">
+    <div class="picker-box">
+      <h3>Что сравниваем?</h3>
+      <p class="muted" style="font-size:13px">Можно сравнивать только устройства одного типа</p>
+      <select aria-label="Первое устройство"></select>
+      <select aria-label="Второе устройство"></select>
+      <a class="btn btn--acc" data-go href="#">Сравнить</a>
+      <button class="btn btn--ghost" data-close>Отмена</button>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span class="mono">EAZYTECH © 2026</span>
+      <span>Цены — ориентир, решения — твои</span>
+      <a class="lnk" href="methodology.html">Методология</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js?v=33"></script>
+</body>
+</html>

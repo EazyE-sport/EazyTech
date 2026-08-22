@@ -1,0 +1,91 @@
+{
+  "id": "cidoo-qk75",
+  "name": "Cidoo QK75",
+  "brand": "Cidoo",
+  "category": "keyboards",
+  "images": [
+    "https://content1.rozetka.com.ua/goods/images/big/643208517.jpg",
+    "https://content2.rozetka.com.ua/goods/images/big/643208522.jpg",
+    "https://content1.rozetka.com.ua/goods/images/big/643208531.jpg",
+    "https://content2.rozetka.com.ua/goods/images/big/643208535.jpg",
+    "https://content.rozetka.com.ua/goods/images/big/643208538.jpg",
+    "https://content1.rozetka.com.ua/goods/images/big/643208542.jpg",
+    "https://content.rozetka.com.ua/goods/images/big/643208545.jpg",
+    "https://content1.rozetka.com.ua/goods/images/big/643208551.jpg"
+  ],
+  "short": "Популярная 75% механическая клавиатура с колесом прокрутки и тройным подключением.",
+  "description": "Cidoo QK75 - это функциональная механическая клавиатура формата 75% (81 клавиша) с мультимедийным колесом прокрутки для регулировки громкости. Оснащена линейными переключателями Cidoo Pearl White, поддерживает тройное подключение (Bluetooth, 2.4 ГГц, провод) и имеет настраиваемую RGB-подсветку.",
+  "price": 3799,
+  "fairPrice": 3800,
+  "scores": {
+    "community": 9400000,
+    "personal": 9100000,
+    "ai": 9250000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Энтузиаст",
+      "score": 9.2,
+      "date": "2026-08-22",
+      "text": "Отличный формат 75% с удобным колесом громкости и приятными свитчами."
+    }
+  ],
+  "specs": {
+    "Формат": "75% (81 клавиша)",
+    "Корпус": "Пластик",
+    "Тип переключателей": "Cidoo Pearl White (Линейные)",
+    "Подключение": "Bluetooth, 2.4 ГГц, USB",
+    "Особенности": "Колесо прокрутки, регулировка громкости, RGB, NKRO"
+  },
+  "shops": [
+    {
+      "name": "ПКбуст",
+      "price": 3799
+    },
+    {
+      "name": "Prom.ua",
+      "price": 3799
+    },
+    {
+      "name": "Rozetka (Акция)",
+      "price": 3990
+    },
+    {
+      "name": "Rozetka (Стандарт)",
+      "price": 4990
+    }
+  ],
+  "pros": [
+    "Удобный формат 75% с колесом прокрутки",
+    "Тройное подключение (Bluetooth, 2.4 ГГц, провод)",
+    "Линейные переключатели Cidoo Pearl White",
+    "Неограниченный NKRO"
+  ],
+  "cons": [
+    "Пластиковый корпус",
+    "Стандартная цена на Розетке завышена"
+  ],
+  "life": {
+    "months": 48,
+    "risk": 5,
+    "riskLabel": "Износ энкодера колеса прокрутки",
+    "fail": 60,
+    "failLabel": "Аккумулятор / Электроника"
+  },
+  "bench": {
+    "input": 9.3,
+    "ergo": 9.2,
+    "materials": 8.2,
+    "features": 9.2,
+    "reliability": 9.0,
+    "support": 8.5,
+    "build": 8.8,
+    "software": 8.2,
+    "value": 9.4,
+    "feel": 9.2
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "ajazz-ak690",
+  "name": "Ajazz AK690",
+  "brand": "Ajazz",
+  "category": "keyboards",
+  "images": [
+    "https://ajazzbrand.com/cdn/shop/files/3_8a88e3fb-0479-44dd-8922-01a4fa279788.jpg?v=1765872285",
+    "https://content1.rozetka.com.ua/goods/images/big/651700603.png",
+    "https://content.rozetka.com.ua/goods/images/big/651700611.png",
+    "https://content1.rozetka.com.ua/goods/images/big/651700608.png",
+    "https://content1.rozetka.com.ua/goods/images/big/651700615.png",
+    "https://ir.ozone.ru/s3/multimedia-1-i/9164667258.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-p/c1000/8574362233.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-j/w500/8556091255.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-s/c600/8574366268.jpg",
+    "https://ajazzbrand.com/cdn/shop/files/2_c4a02b78-607d-4cfe-9fcc-1c8590ed05cb.jpg?v=1773195957&width=990",
+    "https://cdn.shopify.com/s/files/1/0704/7210/6227/files/1_02_b9eb1e2a-642f-4770-822c-b79f476b2703.jpg?v=1765856317"
+  ],
+  "short": "Компактная проводная механическая клавиатура формата 65% с Hot-Swap, RGB, роллером и свитчами Melard Switch MC.",
+  "description": "AJAZZ AK690 — это компактная проводная механическая клавиатура формата 68 клавиш, созданная для геймеров и пользователей, ценящих эргономику, кастомизацию и надёжность. Поддерживает полную hot-swap замену переключателей, оснащена свитчами Melard Switch MC, яркой RGB-подсветкой и многофункциональным регулятором (роллером) громкости.",
+  "price": 2280,
+  "fairPrice": 2927,
+  "scores": {
+    "community": 9200000,
+    "personal": 9100000,
+    "ai": 9150000
+  },
+  "class": "value",
+  "connection": "wired",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Пользователь",
+      "score": 9.1,
+      "date": "2026-08-22",
+      "text": "Интересные плюсы: много кастома, приятный роллер, средние аккуратные свитчи. Отличный выбор за свой бюджет."
+    }
+  ],
+  "specs": {
+    "Форм-фактор": "65% (68 клавиш)",
+    "Тип клавиатуры": "Механическая (проводная)",
+    "Переключатели": "Melard Switch MC",
+    "Hot-swap": "Да (сменные переключатели без пайки)",
+    "Подсветка": "RGB с множеством эффектов",
+    "Особенности": "Многофункциональный регулятор (knob / роллер), NKRO",
+    "Подключение": "Проводное USB Type-C (Plug & Play)",
+    "Корпус": "Пластиковый, белый"
+  },
+  "shops": [
+    {
+      "name": "Rozetka (Скидка)",
+      "price": 2280,
+      "currency": "UAH"
+    },
+    {
+      "name": "Rozetka (Стандарт)",
+      "price": 2927,
+      "currency": "UAH"
+    },
+    {
+      "name": "Ozon (Скидка)",
+      "price": 837,
+      "currency": "UAH",
+      "rubPrice": 1925
+    },
+    {
+      "name": "Ozon (Стандарт)",
+      "price": 1207,
+      "currency": "UAH",
+      "rubPrice": 2777
+    },
+    {
+      "name": "Ajazzbrand.com (Скидка)",
+      "price": 2192,
+      "currency": "USD"
+    },
+    {
+      "name": "Ajazzbrand.com (Стандарт)",
+      "price": 3086,
+      "currency": "USD"
+    }
+  ],
+  "pros": [
+    "Полноценная поддержка Hot-Swap для простой замены свитчей",
+    "Удобный многофункциональный роллер (регулятор громкости)",
+    "Приятные аккуратные средние переключатели Melard Switch MC",
+    "Компактный формат 68 клавиш (65%) с сохранением важного функционала",
+    "Привлекательная цена за свой бюджет (особенно по скидкам)"
+  ],
+  "cons": [
+    "Пластиковый корпус",
+    "Только проводное подключение"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 3,
+    "riskLabel": "Базовая надёжная механика",
+    "fail": 80,
+    "failLabel": "Разгиб контакта hot-swap / кабель"
+  },
+  "bench": {
+    "input": 9.1,
+    "ergo": 8.9,
+    "materials": 8.6,
+    "features": 9.2,
+    "reliability": 8.8,
+    "support": 8.5,
+    "build": 8.7,
+    "software": 8.5,
+    "value": 9.6,
+    "feel": 9.0
+  }
+}

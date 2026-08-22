@@ -1,0 +1,78 @@
+{
+  "id": "mechlands-vibe-75-v2-blue",
+  "name": "MechLands Vibe 75 V2 Blue",
+  "brand": "MechLands",
+  "category": "keyboards",
+  "images": [
+    "https://vusa.org.ua/content/images/48/1600x1600l80mc0/15407704173012.webp",
+    "https://vusa.org.ua/content/images/48/1800x1800l80mc0/53719430289228.webp",
+    "https://vusa.org.ua/content/images/48/1600x1600l80mc0/83060008922960.webp",
+    "https://vusa.org.ua/content/images/48/1600x1600l80mc0/72090535642981.webp",
+    "https://vusa.org.ua/content/images/48/1600x1600l80mc0/67634361105239.webp"
+  ],
+  "short": "Компактная беспроводная клавиатура 75% с TFT-экраном, возможностью установки роллера и кремовым тайпингом.",
+  "description": "MechLands Vibe 75 V2 Blue — это компактная механическая клавиатура формата 75% (79 клавиш + экран) с прокладкой Gasket Mount и платой Flex-cut PC. Оснащена переключателями MechLands Cream Mint / CreamVine, PBT-кейкапами Cherry профиля и мультифункциональным TFT-экраном, на который можно выводить GIF-анимацию или заменить его на роллер громкости. Поддерживает тройное подключение.",
+  "price": 5599,
+  "fairPrice": 2800,
+  "scores": {
+    "community": 9200000,
+    "personal": 9100000,
+    "ai": 9150000
+  },
+  "class": "overpriced",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Технооблогер",
+      "score": 9.1,
+      "date": "2026-08-22",
+      "text": "Потрясающий кремовый тайпинг, богатый функционал с экраном и возможностью установки роллера. Но локальная цена на vusa.org.ua немного завышена по сравнению с мировой (~$70)."
+    }
+  ],
+  "specs": {
+    "Формат": "75% (79 клавиш + экран)",
+    "Корпус": "ABS с металлическими вставками",
+    "Тип переключателей": "MechLands Cream Mint / CreamVine (Hot-swap)",
+    "Подключение": "Bluetooth, 2.4 ГГц (2 мс), Type-C",
+    "Аккумулятор": "4000 мАч",
+    "Особенности": "TFT-экран с поддержкой GIF (можно заменить на роллер громкости), Gasket mount, шумоизоляция"
+  },
+  "shops": [
+    {
+      "name": "vusa.org.ua",
+      "price": 5599,
+      "currency": "UAH"
+    }
+  ],
+  "pros": [
+    "Мультифункциональный TFT-экран с поддержкой GIF и возможностью замены на роллер",
+    "Очень приятный «кремовый» тайпинг благодаря хорошей шумоизоляции и свитчам Cream Mint/CreamVine",
+    "Прочный корпус с металлическими вставками",
+    "Тройное подключение и поддержка Hot-swap"
+  ],
+  "cons": [
+    "Завышенная стоимость в локальном магазине (при реальной цене около $70)",
+    "Короткая гарантия (3 месяца)"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 4,
+    "riskLabel": "Износ экрана / Аккумулятора",
+    "fail": 60,
+    "failLabel": "Аккумулятор"
+  },
+  "bench": {
+    "input": 9.2,
+    "ergo": 9.0,
+    "materials": 8.8,
+    "features": 9.5,
+    "reliability": 8.5,
+    "support": 7.5,
+    "build": 9.0,
+    "software": 8.8,
+    "value": 8.5,
+    "feel": 9.4
+  }
+}

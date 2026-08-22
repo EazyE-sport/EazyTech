@@ -1,0 +1,78 @@
+{
+  "id": "keychron-k10-v2-rgb",
+  "name": "Keychron K10 V2 RGB",
+  "brand": "Keychron",
+  "category": "keyboards",
+  "images": [
+    "https://optim.tildacdn.one/stor3731-6461-4537-a338-613163646261/-/format/webp/90556774.jpg.webp",
+    "https://optim.tildacdn.one/stor6539-3865-4466-a561-303264633866/-/contain/940x1410/center/center/-/format/webp/66506688.jpg.webp",
+    "https://optim.tildacdn.one/stor6633-3861-4161-b130-623261633434/-/format/webp/15083838.jpg.webp",
+    "https://optim.tildacdn.one/stor3137-3638-4034-b365-366636636636/-/format/webp/68766839.jpg.webp",
+    "https://optim.tildacdn.one/stor6338-6263-4439-a362-393163393532/-/format/webp/81925578.jpg.webp"
+  ],
+  "short": "Полноразмерная механическая клавиатура с RGB-подсветкой, Hot Swap и алюминиевой рамкой.",
+  "description": "Keychron K10 V2 RGB - это продвинутая версия популярной полноразмерной модели, оснащенная яркой RGB-подсветкой и поддержкой горячей замены (Hot Swap) переключателей Gateron. Это позволяет пользователю кастомизировать тайпинг без использования паяльника. Алюминиевая верхняя панель придает устройству премиальный вид и дополнительную жесткость корпуса.",
+  "price": 6500,
+  "fairPrice": 6200,
+  "scores": {
+    "community": 9000000,
+    "personal": 8900000,
+    "ai": 8950000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Энтузиаст",
+      "score": 8.9,
+      "date": "2026-08-22",
+      "text": "RGB и Hot Swap - это именно то, чего не хватало базовой версии."
+    }
+  ],
+  "specs": {
+    "Формат": "100% (Полноразмерная)",
+    "Корпус": "Алюминиевая верхняя панель + пластик",
+    "Тип переключателей": "Gateron Mechanical (Hot Swap)",
+    "Подключение": "Bluetooth 5.1, провод",
+    "Кейкапы": "PBT",
+    "Вес": "1160 г",
+    "Софт": "Нет"
+  },
+  "shops": [
+    {
+      "name": "Funkeys",
+      "price": 6500
+    }
+  ],
+  "pros": [
+    "Поддержка горячей замены (Hot Swap)",
+    "Полноразмерный формат",
+    "Яркая RGB-подсветка",
+    "Алюминиевая верхняя панель"
+  ],
+  "cons": [
+    "Нет поддержки QMK/VIA",
+    "Базовая цена не включает доп. услуги"
+  ],
+  "life": {
+    "months": 48,
+    "risk": 7,
+    "riskLabel": "Износ сокетов Hot Swap",
+    "fail": 72,
+    "failLabel": "Электроника"
+  },
+  "bench": {
+    "input": 8.9,
+    "ergo": 9.0,
+    "materials": 8.0,
+    "features": 8.5,
+    "reliability": 9.0,
+    "support": 8.5,
+    "build": 8.5,
+    "software": 5.0,
+    "value": 8.8,
+    "feel": 8.8
+  }
+}

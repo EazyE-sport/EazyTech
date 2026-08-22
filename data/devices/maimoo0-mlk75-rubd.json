@@ -1,0 +1,78 @@
+{
+  "id": "maimoo0-mlk75-rubd",
+  "name": "MAIMOOO MLK75-RUBD",
+  "brand": "MaiMooo",
+  "category": "keyboards",
+  "images": [
+    "https://m.media-amazon.com/images/I/61AJJfvsMYL.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S8c9c487ced28419182fca132a86da57bA.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S73bdb9f6f57c45a2a80737bf4084719d6.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/S63d1f7a3163c4aef93de44f45d115331x.jpg",
+    "https://ae-pic-a1.aliexpress-media.com/kf/Sb4280bac28114eb89070cdbb2e5bd8ecv.jpg"
+  ],
+  "short": "Прозрачная беспроводная механическая клавиатура 75% с боковой подсветкой и роллером.",
+  "description": "MAIMOOO MLK75-RUBD - это полупрозрачная геймерская клавиатура формата 75% (82 клавиши) с гаскет-маунтом, хот-свапом и кристальными свитчами. Оснащена яркой подсветкой корпуса и боковых панелей, роллером громкости с индикатором заряда под ним, а также тройным режимом подключения.",
+  "price": 1396,
+  "fairPrice": 1396,
+  "scores": {
+    "community": 8900000,
+    "personal": 9000000,
+    "ai": 8950000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": "mechanical",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Энтузиаст с Али",
+      "score": 9.0,
+      "date": "2026-08-22",
+      "text": "Отличный прозрачный дизайн с боковой подсветкой и роллером. Но бренд малоизвестный ('NoName'), найти за пределами площадок сложно."
+    }
+  ],
+  "specs": {
+    "Формат": "75% (82 клавиши)",
+    "Корпус": "Прозрачный пластик (Gasket mount)",
+    "Тип переключателей": "Crystal Switches (Hot Swap)",
+    "Подключение": "Bluetooth, 2.4 ГГц (донгл), USB",
+    "Особенности": "Боковая подсветка, роллер громкости с индикатором заряда, PBT кейкапы"
+  },
+  "shops": [
+    {
+      "name": "AliExpress",
+      "price": 1396,
+      "currency": "UAH",
+      "rubPrice": 3211
+    }
+  ],
+  "pros": [
+    "Эффектная боковая подсветка и прозрачный корпус",
+    "Роллер громкости со встроенным индикатором заряда",
+    "Гаскет-маунт и поддержка Hot Swap",
+    "Кристальные свитчи и PBT кейкапы в комплекте"
+  ],
+  "cons": [
+    "Малоизвестный бренд ('NoName'), крайне сложно найти в продаже",
+    "Трудности с доступностью за пределами маркетплейсов"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 6,
+    "riskLabel": "Редкость запчастей / Брендовый NoName",
+    "fail": 60,
+    "failLabel": "Электроника / Подсветка"
+  },
+  "bench": {
+    "input": 9.0,
+    "ergo": 8.8,
+    "materials": 8.0,
+    "features": 9.5,
+    "reliability": 8.0,
+    "support": 7.0,
+    "build": 8.5,
+    "software": 8.0,
+    "value": 9.5,
+    "feel": 8.9
+  }
+}

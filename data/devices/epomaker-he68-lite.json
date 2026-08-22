@@ -1,0 +1,105 @@
+{
+  "id": "epomaker-he68-lite",
+  "name": "Epomaker HE68 Lite",
+  "brand": "Epomaker",
+  "category": "keyboards",
+  "images": [
+    "https://content1.rozetka.com.ua/goods/images/big/659399793.webp",
+    "https://content1.rozetka.com.ua/goods/images/big/659399801.webp",
+    "https://content2.rozetka.com.ua/goods/images/big/659399807.webp",
+    "https://ir.ozone.ru/s3/multimedia-1-0/c1000/7969906836.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-q/c1000/7662542426.jpg",
+    "https://ir.ozone.ru/s3/multimedia-1-7/c1000/7780861555.jpg"
+  ],
+  "short": "Компактная проводная магнитная клавиатура 65% с Hall-Effect, Rapid Trigger, опросом 8000 Гц и 5 слоями шумопоглощения.",
+  "description": "Epomaker HE68 Lite Black Red - это компактная 65% магнитная клавиатура (68 клавиш) на переключателях Clear Mag Switch. Обладает частотой опроса 8000 Гц, сверхнизкой задержкой 0.125 мс, регулируемой точкой срабатывания от 0.1 до 3.3 мм с точностью 0.005 мм, а также расширенными функциями SOCD и DKS. Конструкция включает 5 слоев шумопоглощения для чистого тайпинга, A-RGB подсветку и поддержку hot-swap.",
+  "price": 2799,
+  "fairPrice": 3799,
+  "scores": {
+    "community": 9600000,
+    "personal": 9500000,
+    "ai": 9550000
+  },
+  "class": "value",
+  "connection": "wired",
+  "mechanism": "magnetic",
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "Киберспортсмен",
+      "score": 9.5,
+      "date": "2026-08-22",
+      "text": "Отличный набор функций за свои деньги: 8000 Гц, задержка 0.125 мс, свитчи Clear Mag и 5 слоев шумопоглощения делают тайпинг и игру превосходными."
+    }
+  ],
+  "specs": {
+    "Формат": "65% (68 клавиш)",
+    "Переключатели": "Clear Mag Switch (Магнитные, Hall-Effect)",
+    "Hot-swap": "Да (горячая замена)",
+    "Частота опроса": "8000 Гц",
+    "Задержка": "0.125 мс",
+    "Регулировка активации": "От 0.1 мм до 3.3 мм (точность 0.005 мм)",
+    "Шумопоглощение": "5 слоев",
+    "Кейкапы": "PBT Double-shot",
+    "Подключение": "Проводное USB Type-C",
+    "Габариты и вес": "320 х 110 х 40 мм, 650 г"
+  },
+  "shops": [
+    {
+      "name": "PC Boost (Скидка)",
+      "price": 2799,
+      "currency": "UAH"
+    },
+    {
+      "name": "PC Boost (Стандарт)",
+      "price": 2999,
+      "currency": "UAH"
+    },
+    {
+      "name": "Rozetka (Скидка)",
+      "price": 3799,
+      "currency": "UAH"
+    },
+    {
+      "name": "Rozetka (Стандарт)",
+      "price": 4199,
+      "currency": "UAH"
+    },
+    {
+      "name": "Ozon",
+      "price": 2054,
+      "currency": "UAH",
+      "rubPrice": 4724
+    }
+  ],
+  "pros": [
+    "Передовые магнитные переключатели Clear Mag с точной регулировкой от 0.1 мм",
+    "Высокая частота опроса 8000 Гц и минимальная задержка 0.125 мс",
+    "5 слоев шумопоглощения для чистого и приятного звука тайпинга",
+    "Поддержка продвинутых киберспортивных функций SOCD и DKS",
+    "Отличная цена со скидкой на PC Boost"
+  ],
+  "cons": [
+    "Только проводное подключение",
+    "Относительно легкий корпус (650 г)"
+  ],
+  "life": {
+    "months": 60,
+    "risk": 2,
+    "riskLabel": "Магнитные датчики без механического трения контактов",
+    "fail": 85,
+    "failLabel": "Кабель / Разъем Type-C"
+  },
+  "bench": {
+    "input": 9.9,
+    "ergo": 8.9,
+    "materials": 9.1,
+    "features": 9.8,
+    "reliability": 9.6,
+    "support": 8.5,
+    "build": 9.0,
+    "software": 9.2,
+    "value": 9.6,
+    "feel": 9.7
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "id": "atk-fierce-x-lightweight-magnesium",
+  "name": "ATK Fierce X Lightweight Magnesium Alloy",
+  "brand": "ATK",
+  "category": "mice",
+  "images": [
+    "https://www.atk.store/cdn/shop/files/ATK_Fierce_X_Black.jpg?v=1741865848&width=800",
+    "https://www.atk.store/cdn/shop/files/desktop_fiercex-04.jpg?v=1732795070&width=2000",
+    "https://www.atk.store/cdn/shop/files/desktop_fiercex-03.jpg?v=1732795070&width=2000",
+    "https://www.atk.store/cdn/shop/files/ATK_Fierce_X_Silver_Gray.jpg?v=1741867983&width=800",
+    "https://www.atk.store/cdn/shop/files/ATK_Fierce_X_White.jpg?v=1741867951&width=800",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS8IehPTt4rInsWcLA-HWVjWltCg5KaJtLMz-NkpPvx5jq3e7qWVgrrr4y&s=10",
+    "https://ir.ozone.ru/s3/multimedia-1-y/8032696090.jpg"
+  ],
+  "short": "Ультралегкая соревновательная игровая мышь в магниево-алюминиевом экзоскелете с сенсором PAW3950 Ultra и поддержкой 8000Hz.",
+  "description": "ATK Fierce X - это передовая игровая мышь с экзоскелетом из магниево-алюминиевого сплава, снижающим вес до невероятных 42 грамм при сохранении жесткости корпуса. Мышь оснащена флагманским сенсором PAW3950 Ultra, контроллером Nordic 52840, поддержкой частоты опроса 8000Hz и оптическими переключателями Omron.\n\nСоздана для киберспорта и идеально подходит для хвата когтем (claw grip). Поддерживает три режима подключения (2.4GHz, проводной и Bluetooth).",
+  "price": 3100,
+  "fairPrice": 4000,
+  "scores": {
+    "community": 9000000,
+    "personal": 9300000,
+    "ai": 9100000
+  },
+  "class": "value",
+  "connection": "hybrid",
+  "mechanism": null,
+  "kolhoz": false,
+  "reviews": [
+    {
+      "author": "EazyTech Review",
+      "score": 9.2,
+      "date": "2026-06-01",
+      "text": "Невероятный вес 42 грамма, топовый сенсор и магниевый корпус. Настоящая имба для соревновательных шутеров."
+    },
+    {
+      "author": "Аноним",
+      "score": 8.0,
+      "date": "2026-06-02",
+      "text": "Дырачкееее!"
+    }
+  ],
+  "specs": {
+    "Форма": "Симметричная (экзоскелет)",
+    "Вес": "42 г",
+    "Размеры": "119.57 x 60.99 x 36.26 мм",
+    "Сенсор": "PAW3950 Ultra",
+    "MCU": "Nordic 52840",
+    "Частота опроса": "До 8000Hz",
+    "Переключатели": "Omron Optical",
+    "Энкодер колеса": "F-Switch E10 Flagship",
+    "Аккумулятор": "230 мАч (до 70 часов на 1000Hz)",
+    "Подключение": "2.4GHz, проводное, Bluetooth"
+  },
+  "shops": [
+    {
+      "name": "ATK Store (скидка)",
+      "price": "77USD"
+    },
+    {
+      "name": "ATK Store (стандарт)",
+      "price": "90USD"
+    },
+    {
+      "name": "Озон (скидка)",
+      "price": "8100RUB"
+    },
+    {
+      "name": "Озон (стандарт)",
+      "price": "8900RUB"
+    },
+    {
+      "name": "DNS (скидка)",
+      "price": "5600RUB"
+    },
+    {
+      "name": "DNS (стандарт)",
+      "price": "6699RUB"
+    }
+  ],
+  "pros": [
+    "Топовый сенсор PixArt PAW3950Ultra с максимальным разрешением до 42 000 DPI",
+    "Мощный чип Nordic 52840 и поддержка беспроводной частоты опроса до 8000 Гц",
+    "Минимальный вес благодаря легкому магниевому корпусу",
+    "Качественные и долговечные переключатели с быстрым откликом",
+    "Удобная симметричная форма для когтевого или пальцевого хвата"
+  ],
+  "cons": [
+    "Небольшая емкость аккумулятора (около 200 мАч), из-за чего при высокой частоте опроса батарея быстро садится",
+    "Специфическая маленькая форма, способная вызывать усталость или судороги в крупных руках при долгой игре",
+    "Стандартные стоковые глайды, уступающие более продвинутым аналогам"
+  ],
+  "life": {
+    "months": 48,
+    "risk": 15,
+    "riskLabel": "Стандартный износ аккумулятора или механизма колеса.",
+    "fail": 35,
+    "failLabel": "Выработка ресурса беспроводного чипа или сенсора."
+  },
+  "bench": {
+    "input": 9.8,
+    "ergo": 9.2,
+    "materials": 9.8,
+    "features": 9.5,
+    "reliability": 8.8,
+    "support": 8.5,
+    "build": 9.6,
+    "software": 8.8,
+    "value": 9.0,
+    "feel": 9.7
+  }
+}
