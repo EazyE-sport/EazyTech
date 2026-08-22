@@ -1,10 +1,15 @@
 [
+  "ajazz-aj159-apex.json",
   "ajazz-aj199-white-carbon.json",
   "ajazz-ak33.json",
   "ajazz-ak690.json",
   "ajazz-ak820-pro.json",
   "ajazz-ak870-v2.json",
+  "atk-blazing-sky-f1-ultimate.json",
+  "atk-blazing-sky-ghost-carbon-fiber.json",
+  "atk-blazing-sky-x1-ultimate.json",
   "atk-fierce-x-lightweight-magnesium.json",
+  "atk-rs7-v2-aluminum-hall-effect.json",
   "attack-shark-m87-grey-gradient.json",
   "attack-shark-r85-he.json",
   "aula-f75-max.json",
@@ -32,6 +37,7 @@
   "keychron-v3-max_2.json",
   "keychron-v6-ultra-8k.json",
   "leobog-hi75-pro-blue-pink.json",
+  "logitech-g435-lightspeed-wireless.json",
   "maimoo0-mlk75-rubd.json",
   "mchose-g75-pro.json",
   "mchose-jet-75-topographic-white.json",
@@ -39,6 +45,5 @@
   "mechlands-vibe-75-v2-blue.json",
   "royal-kludge-r75-silver-ru.json",
   "test-device.json",
-  "toxic-ant-lt75.json",
-  "wobkey-rainy-75-pro-silver.json"
+  "toxic-ant-lt75.json"
 ]
