@@ -1,0 +1,48 @@
+{
+  "id": "gprox2",
+  "name": "Logitech G Pro X Superlight 2",
+  "brand": "Logitech",
+  "category": "mice",
+  "image": "",
+  "short": "54 грамма без дырок и компромиссов. Скучно, но настолько хорошо, что скучно прощать.",
+  "price": 12990,
+  "fairPrice": 11500,
+  "rating": 8.4,
+  "reviews": 412,
+  "specs": {
+    "Вес": "60 г",
+    "Сенсор": "Hero 2",
+    "DPI": "32 000",
+    "Опрос": "4000 Гц",
+    "Батарея": "95 ч",
+    "Свитчи": "Lightforce"
+  },
+  "shops": [
+    { "name": "DNS", "price": 12990 },
+    { "name": "OZON", "price": 11990 },
+    { "name": "Citilink", "price": 13490 },
+    { "name": "Wildberries", "price": 12390 }
+  ],
+  "pros": [
+    "Эталонная форма под claw и fingertip",
+    "Hero 2 — ноль срывов на любой скорости",
+    "Оптические Lightforce без дребезга двойного клика",
+    "Powerplay-совместимость из коробки"
+  ],
+  "cons": [
+    "Нет Bluetooth — только 2.4 ГГц",
+    "Стоковые PTFE-ножки требуют привычки",
+    "Цена не прощает бюджет"
+  ],
+  "life": {
+    "months": 24,
+    "risk": 18,
+    "riskLabel": "Двойной клик на оптике исключён. Риск — износ боковых грипсов.",
+    "fail": 48,
+    "failLabel": "Колесо начинает прокручиваться неравномерно."
+  },
+  "bench": {
+    "input": 9.2, "ergo": 8.8, "materials": 8.2, "features": 7.4, "reliability": 9.0,
+    "support": 7.2, "build": 9.1, "software": 7.8, "value": 6.9, "feel": 9.4
+  }
+}

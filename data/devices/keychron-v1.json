@@ -1,0 +1,48 @@
+{
+  "id": "keychron-v1",
+  "name": "Keychron V1",
+  "brand": "Keychron",
+  "category": "keyboards",
+  "image": "",
+  "short": "Бюджетная дверь в мир кастомов. Пластик скрипит, но QMK — есть QMK.",
+  "price": 5690,
+  "fairPrice": 5200,
+  "rating": 8.3,
+  "reviews": 187,
+  "specs": {
+    "Формат": "75%",
+    "Свитчи": "Keychron K Pro",
+    "Опрос": "1000 Гц",
+    "Вес": "1000 г",
+    "Hotswap": "да",
+    "Софт": "QMK / VIA"
+  },
+  "shops": [
+    { "name": "DNS", "price": 5690 },
+    { "name": "OZON", "price": 5290 },
+    { "name": "Citilink", "price": 5990 },
+    { "name": "Wildberries", "price": 5490 }
+  ],
+  "pros": [
+    "QMK/VIA за бюджетный ценник",
+    "Горячая замена свитчей",
+    "Приличные стабилизаторы за свои деньги",
+    "Корпус с шумкой"
+  ],
+  "cons": [
+    "Пластиковый корпус скрипит",
+    "Кейкапы OSA на любителя",
+    "Кабель — как у принтера"
+  ],
+  "life": {
+    "months": 24,
+    "risk": 16,
+    "riskLabel": "Скрип корпуса, свитчи раскачиваются в гнёздах.",
+    "fail": 40,
+    "failLabel": "Износ стабилизаторов и надписей на кейкапах."
+  },
+  "bench": {
+    "input": 7.6, "ergo": 7.9, "materials": 7.2, "features": 8.0, "reliability": 7.8,
+    "support": 7.4, "build": 7.6, "software": 9.0, "value": 9.0, "feel": 7.9
+  }
+}

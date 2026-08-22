@@ -1,0 +1,48 @@
+{
+  "id": "wooting60he",
+  "name": "Wooting 60HE",
+  "brand": "Wooting",
+  "category": "keyboards",
+  "image": "",
+  "short": "Магнитные свитчи и Rapid Trigger. Клавиатура, из-за которой люди продают почки.",
+  "price": 19990,
+  "fairPrice": 17500,
+  "rating": 8.8,
+  "reviews": 156,
+  "specs": {
+    "Формат": "60%",
+    "Свитчи": "Lekker L60 (Hall)",
+    "Опрос": "8000 Гц",
+    "Вес": "605 г",
+    "Hotswap": "да",
+    "Софт": "Wootility (Web)"
+  },
+  "shops": [
+    { "name": "DNS", "price": 19990 },
+    { "name": "OZON", "price": 18490 },
+    { "name": "Citilink", "price": 20990 },
+    { "name": "Wildberries", "price": 18990 }
+  ],
+  "pros": [
+    "Rapid Trigger — реакция быстрее, чем у нервной системы",
+    "Аналоговый ход в играх и системе",
+    "Честные 8000 Гц без маркетинга",
+    "Софт в браузере, без блоатваря"
+  ],
+  "cons": [
+    "Цена почти как у консоли",
+    "PBT-кейкапы быстро затираются",
+    "Поставки надо ждать"
+  ],
+  "life": {
+    "months": 36,
+    "risk": 24,
+    "riskLabel": "Стабилизаторы начинают греметь, смазка свитчей высыхает.",
+    "fail": 60,
+    "failLabel": "Износ пружин — неравномерный ход клавиш."
+  },
+  "bench": {
+    "input": 9.4, "ergo": 8.2, "materials": 8.6, "features": 9.3, "reliability": 8.8,
+    "support": 7.6, "build": 9.0, "software": 9.4, "value": 7.2, "feel": 9.2
+  }
+}

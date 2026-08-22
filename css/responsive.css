@@ -1,0 +1,179 @@
+@media (max-width: 1024px) {
+  .cat-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .fab-filters {
+    display: inline-flex;
+  }
+
+  .dev-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .dev-visual {
+    order: -1;
+  }
+
+  .dev-visual img {
+    max-height: 300px;
+  }
+
+  .vs-head {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .vs-side,
+  .vs-side.flip {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .vs-mark {
+    order: -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding-top: 60px;
+  }
+
+  .nav {
+    height: 60px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .cats {
+    grid-template-columns: 1fr;
+  }
+
+  .cat-tile {
+    min-height: 180px;
+    padding: 26px;
+  }
+
+  .sec {
+    padding: 48px 0;
+  }
+
+  .sec-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hero {
+    min-height: calc(100vh - 60px);
+    padding: 48px 0;
+  }
+
+  .hero-stats {
+    gap: 24px;
+  }
+
+  .hstat b {
+    font-size: 18px;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .card-body {
+    padding: 14px;
+  }
+
+  .card-foot {
+    padding: 0 14px 14px;
+  }
+
+  .card .price {
+    font-size: 15px;
+  }
+
+  .thumb {
+    padding: 12px;
+  }
+
+  .pc {
+    grid-template-columns: 1fr;
+  }
+
+  .pc-chart {
+    gap: 12px;
+    height: 240px;
+  }
+
+  .stripe {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .stripe .val {
+    display: none;
+  }
+
+  .dev-price {
+    font-size: 24px;
+  }
+
+  .specs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .verdict {
+    padding: 20px;
+    font-size: 13px;
+  }
+
+  .tl-tip {
+    width: 190px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dev-visual img {
+    max-height: 240px;
+  }
+}

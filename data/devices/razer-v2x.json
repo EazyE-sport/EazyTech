@@ -1,0 +1,48 @@
+{
+  "id": "razer-v2x",
+  "name": "Razer DeathAdder V2 X Hyperspeed",
+  "brand": "Razer",
+  "category": "mice",
+  "image": "",
+  "short": "Тот самый эрго-классик, только дешевле и на батарейках. Всё ещё жив.",
+  "price": 5490,
+  "fairPrice": 5500,
+  "rating": 7.9,
+  "reviews": 289,
+  "specs": {
+    "Вес": "86 г",
+    "Сенсор": "5G Advanced",
+    "DPI": "14 000",
+    "Опрос": "1000 Гц",
+    "Батарея": "235 ч",
+    "Свитчи": "Mechanical"
+  },
+  "shops": [
+    { "name": "DNS", "price": 5490 },
+    { "name": "OZON", "price": 4990 },
+    { "name": "Citilink", "price": 5790 },
+    { "name": "Wildberries", "price": 5190 }
+  ],
+  "pros": [
+    "Каноничная эргономика для ладони",
+    "Два источника питания: AA и AAA",
+    "Гибридная связь — Bluetooth и 2.4 ГГц",
+    "Честная цена за имя"
+  ],
+  "cons": [
+    "86 г для «геймерской» мыши — много",
+    "Механика — двойной клик через год возможен",
+    "Корпус собирает отпечатки"
+  ],
+  "life": {
+    "months": 30,
+    "risk": 20,
+    "riskLabel": "Типичный для Razer износ механических свитчей — клик начинает дублироваться.",
+    "fail": 42,
+    "failLabel": "Скрип корпуса и люфт основных кнопок."
+  },
+  "bench": {
+    "input": 7.9, "ergo": 9.1, "materials": 6.9, "features": 7.6, "reliability": 6.8,
+    "support": 6.9, "build": 7.0, "software": 7.4, "value": 8.9, "feel": 7.8
+  }
+}

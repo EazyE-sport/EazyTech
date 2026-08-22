@@ -1,0 +1,47 @@
+{
+  "id": "katana",
+  "name": "MSI Vigor GK50 Low Profile",
+  "brand": "MSI",
+  "category": "keyboards",
+  "image": "",
+  "short": "Низкопрофильная, чтобы было удобно. В остальном — компромисс за компромиссом.",
+  "price": 6490,
+  "fairPrice": 5600,
+  "rating": 6.6,
+  "reviews": 74,
+  "specs": {
+    "Формат": "Full-size",
+    "Свитчи": "Kailh Low Profile",
+    "Опрос": "1000 Гц",
+    "Вес": "700 г",
+    "Hotswap": "нет",
+    "Софт": "MSI Center"
+  },
+  "shops": [
+    { "name": "DNS", "price": 6490 },
+    { "name": "OZON", "price": 5990 },
+    { "name": "Citilink", "price": 6790 },
+    { "name": "Wildberries", "price": 6290 }
+  ],
+  "pros": [
+    "Низкий профиль реально удобен",
+    "Каиль-свитчи приятно клацают",
+    "Металлическая верхняя плита"
+  ],
+  "cons": [
+    "Переплата за бренд",
+    "Кейкапы не найти в продаже",
+    "Софт MSI Center — мусор"
+  ],
+  "life": {
+    "months": 24,
+    "risk": 14,
+    "riskLabel": "Люфт клавиш, стираются надписи на кейкапах.",
+    "fail": 36,
+    "failLabel": "Свитчи начинают пропускать нажатия."
+  },
+  "bench": {
+    "input": 6.4, "ergo": 8.0, "materials": 6.8, "features": 5.8, "reliability": 6.4,
+    "support": 6.0, "build": 6.8, "software": 4.6, "value": 5.8, "feel": 7.0
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "k8pro",
+  "name": "Keychron K8 Pro",
+  "brand": "Keychron",
+  "category": "keyboards",
+  "image": "",
+  "short": "QMK/VIA, горячая замена, гаскет. Тот случай, когда ключевые слова — правда.",
+  "price": 7990,
+  "fairPrice": 7400,
+  "rating": 8.1,
+  "reviews": 210,
+  "specs": {
+    "Формат": "TKL",
+    "Свитчи": "Gateron Pro",
+    "Опрос": "1000 Гц",
+    "Вес": "1035 г",
+    "Hotswap": "да",
+    "Софт": "QMK / VIA"
+  },
+  "shops": [
+    { "name": "DNS", "price": 7990 },
+    { "name": "OZON", "price": 7490 },
+    { "name": "Citilink", "price": 8290 },
+    { "name": "Wildberries", "price": 7790 }
+  ],
+  "pros": [
+    "QMK/VIA из коробки",
+    "Горячая замена свитчей",
+    "Гаскет-монтаж и шумка в базе",
+    "Bluetooth до трёх устройств"
+  ],
+  "cons": [
+    "Кейкапы только ABS",
+    "Батарея 4000 мАч живёт скромно",
+    "Стабилизаторы надо смазывать самому"
+  ],
+  "life": {
+    "months": 30,
+    "risk": 20,
+    "riskLabel": "Стабилизаторы гремят, блютус начинает отваливаться.",
+    "fail": 48,
+    "failLabel": "Износ свитчей Gateron Pro — дребезг нажатий."
+  },
+  "bench": {
+    "input": 7.8, "ergo": 8.0, "materials": 7.8, "features": 8.4, "reliability": 8.0,
+    "support": 7.4, "build": 8.2, "software": 9.0, "value": 8.6, "feel": 8.0
+  }
+}
