@@ -361,6 +361,16 @@
   background: var(--glow);
 }
 
+.cat-tile--wide {
+  grid-column: span 2;
+}
+
+@media (max-width: 760px) {
+  .cat-tile--wide {
+    grid-column: auto;
+  }
+}
+
 /* ============ карточка устройства ============ */
 
 .grid {
@@ -525,55 +535,305 @@
 
 /* рейтинг-кольцо */
 
-.ring {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
+/* ============ чипы категорий ============ */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
 }
 
-.ring svg {
-  transform: rotate(-90deg);
-}
-
-.ring .track {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.08);
-  stroke-width: 3;
-}
-
-.ring .bar {
-  fill: none;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-dasharray: 94.2;
-  stroke-dashoffset: 94.2;
-  transition: stroke-dashoffset 1s var(--e-out);
-  transition-delay: calc(var(--d, 0ms) + 200ms);
-}
-
-.in .ring .bar,
-.ring.in .bar,
-.in-new .ring .bar {
-  stroke-dashoffset: var(--off);
-}
-
-.ring b {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
+.chip {
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--f-m);
   font-size: 13px;
+  color: var(--txt-2);
+  transition: transform var(--f2) var(--e-out), color var(--f2) var(--e-out),
+    border-color var(--f2) var(--e-out), background var(--f2) var(--e-out);
+}
+
+.chip i {
+  font-style: normal;
+  margin-left: 8px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.chip:hover {
+  color: var(--txt);
+  transform: translateY(-2px);
+}
+
+.chip.on {
+  color: var(--acc);
+  border-color: rgba(255, 107, 53, 0.5);
+  background: var(--glow);
+}
+
+/* ============ пагинатор ============ */
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.pg-info {
+  font-family: var(--f-m);
+  font-size: 12px;
+  color: var(--txt-2);
+}
+
+.pg-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pg-btn {
+  min-width: 36px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--f-m);
+  font-size: 13px;
+  color: var(--txt-2);
+  transition: transform var(--f2) var(--e-out), color var(--f2) var(--e-out),
+    border-color var(--f2) var(--e-out), background var(--f2) var(--e-out);
+}
+
+.pg-btn:hover:not(:disabled) {
+  color: var(--txt);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.pg-btn.on {
+  color: var(--acc);
+  border-color: rgba(255, 107, 53, 0.5);
+  background: var(--glow);
+}
+
+.pg-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.pg-gap {
+  align-self: center;
+  color: var(--txt-2);
+  font-family: var(--f-m);
+}
+
+/* ============ ранг на карточке ============ */
+
+.rank {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  font-family: var(--f-m);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  padding: 4px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 2px;
+  background: rgba(8, 9, 10, 0.75);
+  backdrop-filter: blur(6px);
+  color: var(--txt-2);
+}
+
+.rank--hi {
+  color: var(--acc);
+  border-color: rgba(255, 107, 53, 0.55);
+  box-shadow: 0 0 14px var(--glow);
+}
+
+/* средний балл на карточке */
+
+.score {
+  text-align: right;
+  font-family: var(--f-m);
+  white-space: nowrap;
+}
+
+.score b {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--acc-2);
+}
+
+.score i {
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--txt-2);
+}
+
+/* ============ шкалы оценок ============ */
+
+.scores {
+  display: grid;
+  gap: 16px;
+}
+
+.s-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 170px;
+  gap: 18px;
+  align-items: center;
+}
+
+.s-lab {
+  font-size: 13px;
+  color: var(--txt-2);
+}
+
+.s-bar {
+  height: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.s-bar i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, rgba(255, 107, 53, 0.45), var(--acc));
+  transition: width 900ms var(--e-out);
+}
+
+.s-row.in .s-bar i {
+  width: var(--w);
+}
+
+.s-val {
+  font-family: var(--f-m);
+  font-size: 13px;
+  text-align: right;
+  color: var(--txt);
+}
+
+.s-row.avg {
+  grid-template-columns: 200px 1fr;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.s-avg {
+  font-family: var(--f-m);
+  font-size: 24px;
+  color: var(--acc-2);
+}
+
+.s-rank {
+  font-family: var(--f-m);
+  font-size: 13px;
+  color: var(--acc);
+}
+
+/* ============ описание ============ */
+
+.desc p {
+  max-width: 72ch;
+  font-size: 15px;
+  color: var(--txt-2);
+  margin-bottom: 14px;
+}
+
+/* ============ обзоры ============ */
+
+.reviews {
+  display: grid;
+  gap: 14px;
+}
+
+.rev {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 4px 4px;
+  background: var(--bg-2);
+}
+
+.rev-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-family: var(--f-m);
+  font-size: 12px;
+  color: var(--txt-2);
+}
+
+.rev-head b {
+  color: var(--txt);
   font-weight: 500;
 }
 
-.ring.good .bar { stroke: var(--acc-2); }
-.ring.mid .bar { stroke: var(--acc); }
-.ring.bad .bar { stroke: var(--bad); }
+.rev-score {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px solid;
+}
 
-.ring.good b { color: var(--acc-2); }
-.ring.mid b { color: var(--acc); }
-.ring.bad b { color: var(--bad); }
+.rev-score.good { color: var(--acc-2); border-color: rgba(0, 212, 170, 0.4); }
+.rev-score.mid { color: var(--acc); border-color: rgba(255, 107, 53, 0.4); }
+.rev-score.bad { color: var(--bad); border-color: rgba(255, 46, 99, 0.4); }
+
+.rev p {
+  font-size: 15px;
+}
+
+/* ============ галерея ============ */
+
+.gal {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.gal[hidden] {
+  display: none;
+}
+
+.gal button {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+  opacity: 0.55;
+  transition: opacity var(--f2) var(--e-out), border-color var(--f2) var(--e-out);
+}
+
+.gal button.on {
+  opacity: 1;
+  border-color: var(--acc);
+}
+
+.gal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dev-visual img {
+  transition: opacity 200ms var(--e-out);
+}
 
 /* ============ фильтры ============ */
 

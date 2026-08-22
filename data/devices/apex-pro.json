@@ -3,12 +3,20 @@
   "name": "SteelSeries Apex Pro TKL 2023",
   "brand": "SteelSeries",
   "category": "keyboards",
-  "image": "",
+  "images": [],
   "short": "OmniPoint 2.0 и экранчик. Флагман, который устарел за два года.",
+  "description": "Apex Pro TKL — главный конкурент Wooting: магнитные свитчи OmniPoint 2.0 с регулируемым ходом, алюминиевая плита и OLED-экранчик для тех, кто любит цифры перед глазами.\n\nПроблема в цене и софте: SteelSeries GG прожорлив, а просят за клавиатуру почти столько же, сколько за более быстрый Wooting. Если найдёшь по акции — отличный выбор, по полной цене — спорный.",
   "price": 16490,
   "fairPrice": 14500,
-  "rating": 7.8,
-  "reviews": 98,
+  "scores": { "community": 7700000, "personal": 7200000, "ai": 7400000 },
+  "class": "balanced",
+  "connection": "wired",
+  "mechanism": "magnetic",
+  "kolhoz": false,
+  "reviews": [
+    { "author": "Витя", "score": 8, "date": "2026-02-26", "text": "Регулировка хода — реально удобная штука, а не маркетинг. Экранчик чисто для красоты." },
+    { "author": "Алина", "score": 7, "date": "2025-12-01", "text": "SteelSeries GG в фоне жрёт заметный процент CPU. После обновления пришлось переустанавливать." }
+  ],
   "specs": {
     "Формат": "TKL",
     "Свитчи": "OmniPoint 2.0 (Hall)",

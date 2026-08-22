@@ -1,33 +1,31 @@
-const C = 94.2;
+import { avg } from "../data/loader.js";
+
+const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
+const fmt = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
 export const tint = (r) => (r < 6 ? "bad" : r < 7.5 ? "mid" : "good");
 
-const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
-
-function ring(r) {
-  const off = C * (1 - r / 10);
-  return `<span class="ring ${tint(r)}">
-    <svg width="44" height="44" viewBox="0 0 44 44">
-      <circle class="track" cx="22" cy="22" r="15"></circle>
-      <circle class="bar" cx="22" cy="22" r="15" style="--off:${off}"></circle>
-    </svg>
-    <b>${r.toFixed(1)}</b>
-  </span>`;
-}
+const initials = (name) => name.split(" ").slice(0, 2).map((w) => w[0]).join("");
 
 function tags(d) {
   const out = [];
-  if (d.rating < 6.5) out.push('<span class="tag tag-bad">Колхоз</span>');
-  else if (d.price <= d.fairPrice) out.push('<span class="tag tag-deal">Fair deal</span>');
+  if (d.kolhoz) out.push('<span class="tag tag-bad">Колхоз</span>');
+  if (d.price <= d.fairPrice) out.push('<span class="tag tag-deal">Fair deal</span>');
   return out.join("");
 }
 
-function thumb(d) {
-  if (!d.image) return `<div class="thumb-ph">${d.name.split(" ").slice(0, 2).map((w) => w[0]).join("")}</div>`;
-  return `<img src="${d.image}" alt="${d.name}" loading="lazy">`;
+function tagTop(rank) {
+  if (!rank || rank > 10) return "";
+  return `<span class="rank${rank <= 3 ? " rank--hi" : ""}">ТОП ${rank}</span>`;
 }
 
-export function card(d, i = 0) {
+function thumb(d) {
+  const src = (d.images || [])[0];
+  if (!src) return `<div class="thumb-ph">${initials(d.name)}</div>`;
+  return `<img src="${src}" alt="${d.name}" loading="lazy">`;
+}
+
+export function card(d, i = 0, rank = 0) {
   const el = document.createElement("a");
   el.href = `device.html?id=${d.id}`;
   el.className = "card in-new tilt";
@@ -35,16 +33,18 @@ export function card(d, i = 0) {
   el.innerHTML = `
     <span class="glare"></span>
     <span class="tags">${tags(d)}</span>
+    ${tagTop(rank)}
     <span class="thumb">${thumb(d)}</span>
     <span class="card-body">
       <span>
         <span class="name">${d.name}</span>
         <span class="short">${d.short}</span>
       </span>
-      ${ring(d.rating)}
+      <span class="score"><b>${fmt(avg(d))}</b><i>ср. балл</i></span>
     </span>
     <span class="card-foot">
-      <span>${d.reviews} обзоров</span>
+      <span class="price"><em>0 ₴</em></span>
+      <span>${(d.reviews || []).length} обзоров</span>
     </span>`;
 
   const img = el.querySelector("img");
@@ -52,15 +52,10 @@ export function card(d, i = 0) {
     img.addEventListener("error", () => {
       img.replaceWith(Object.assign(document.createElement("div"), {
         className: "thumb-ph",
-        textContent: d.name.split(" ").slice(0, 2).map((w) => w[0]).join(""),
+        textContent: initials(d.name),
       }));
     });
   }
-
-  const price = document.createElement("span");
-  price.className = "price";
-  price.innerHTML = `<em>0 ₴</em>`;
-  el.querySelector(".card-foot").prepend(price);
 
   tilt(el);
   return el;
@@ -88,10 +83,10 @@ function tilt(el) {
   });
 }
 
-export function render(grid, list) {
+export function render(grid, list, rmap) {
   grid.innerHTML = "";
   list.forEach((d, i) => {
-    const c = card(d, i);
+    const c = card(d, i, rmap ? rmap.get(d.id)?.c : 0);
     grid.append(c);
     const price = c.querySelector(".price em");
     if (price && !matchMedia("(prefers-reduced-motion: reduce)").matches) {

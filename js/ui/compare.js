@@ -1,5 +1,7 @@
+import { avg } from "../data/loader.js";
+
 const ROWS = [
-  ["Общий рейтинг", "rating", 1],
+  ["Общий балл", "score", 1],
   ["Цена", "price", -1],
   ["Вес (г)", "weight", -1],
   ["Ввод / сенсор", "bench.input", 1],
@@ -11,16 +13,21 @@ const ROWS = [
 ];
 
 function val(d, path) {
+  if (path === "score") return avg(d);
   if (path === "weight") {
     const w = d.specs["Вес"] || d.specs["вес"] || "0";
-    return parseFloat(String(w).replace(",", ".")) || 0;
+    return parseFloat(String(w).replace(",", ".")) || null;
   }
-  return path.split(".").reduce((o, k) => o[k], d);
+  if (path.startsWith("bench.")) {
+    return d.bench ? d.bench[path.split(".")[1]] : null;
+  }
+  return path.split(".").reduce((o, k) => (o ? o[k] : null), d);
 }
 
 function scores(a, b, path, dir) {
   const va = val(a, path);
   const vb = val(b, path);
+  if (va == null || vb == null || isNaN(va) || isNaN(vb)) return [50, 50, false, false];
   const min = Math.min(va, vb);
   const max = Math.max(va, vb);
   if (dir === 1) return [va / max * 100, vb / max * 100, va > vb, va < vb];
@@ -29,6 +36,7 @@ function scores(a, b, path, dir) {
 }
 
 const money = (v) => v.toLocaleString("ru-RU").replace(/,/g, " ") + " ₴";
+const fmt = (v) => Math.round(v).toLocaleString("ru-RU").replace(/,/g, " ");
 
 export function draw(list, a, b) {
   let winsA = 0, winsB = 0;
@@ -36,7 +44,7 @@ export function draw(list, a, b) {
     const [wa, wb, winA, winB] = scores(a, b, path, dir);
     if (winA) winsA++;
     if (winB) winsB++;
-    const fmt = (d, p) => (p === "price" ? money(val(d, p)) : p === "weight" ? val(d, p) + " г" : val(d, p));
+    const f = (d, p) => (p === "price" ? money(val(d, p)) : p === "weight" ? val(d, p) + " г" : p === "score" ? fmt(val(d, p)) : val(d, p));
     return `
       <div class="stripe reveal" data-reveal>
         <span class="lab">${lab}</span>
