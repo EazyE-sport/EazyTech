@@ -2396,14 +2396,26 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 10px 22px -10px var(--glow);
 }
 
+.ff-photo {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 0 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 4px 4px;
+  background: #fff;
+  mix-blend-mode: multiply;
+}
+
 .ff-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 14px;
 }
 
 .ff-card {
   position: relative;
+  min-width: 0;
   display: grid;
   gap: 8px;
   padding: 20px;
@@ -2423,17 +2435,6 @@ input[type="range"]::-moz-range-thumb {
 .ff--best {
   border-color: rgba(255, 107, 53, 0.55);
   box-shadow: 0 10px 24px -12px var(--glow);
-}
-
-.ff-vis {
-  width: calc(var(--k) * 2.4px);
-  max-width: 100%;
-  height: 46px;
-  border-radius: 4px;
-  background:
-    repeating-linear-gradient(0deg, transparent 0 7px, rgba(33, 29, 22, 0.1) 7px 8px),
-    repeating-linear-gradient(90deg, transparent 0 9px, rgba(33, 29, 22, 0.1) 9px 10px),
-    var(--bg-3);
 }
 
 .ff-card h3 {
