@@ -291,8 +291,39 @@ let page = 1;
 let catUI = false;
 let rsBound = false;
 let cmpUI = false;
+let catBounds = { min: 0, max: Infinity };
 
 const pageSize = () => (innerWidth <= 760 ? 15 : 30);
+
+// читаем выбранные фильтры из URL (чтобы страница открывалась уже с ними)
+function filtersFromUrl() {
+  const p = new URLSearchParams(location.search);
+  const split = (v) => (v ? v.split(",").filter(Boolean) : []);
+  F.state.brands = split(p.get("brand"));
+  F.state.cls = split(p.get("class"));
+  F.state.conn = split(p.get("conn"));
+  F.state.mech = split(p.get("mech"));
+  F.state.deal = p.get("deal") === "1";
+  F.state.score = p.get("score") ? +p.get("score") : 0;
+  F.state.min = p.get("min") ? +p.get("min") : catBounds.min;
+  F.state.max = p.get("max") ? +p.get("max") : catBounds.max;
+}
+
+// пишем выбранные фильтры в URL (страница сразу «обновляется» с ними)
+function urlFromFilters() {
+  const p = new URLSearchParams();
+  if (F.state.cat) p.set("cat", F.state.cat);
+  if (F.state.brands.length) p.set("brand", F.state.brands.join(","));
+  if (F.state.cls.length) p.set("class", F.state.cls.join(","));
+  if (F.state.conn.length) p.set("conn", F.state.conn.join(","));
+  if (F.state.mech.length) p.set("mech", F.state.mech.join(","));
+  if (F.state.deal) p.set("deal", "1");
+  if (F.state.min > catBounds.min) p.set("min", F.state.min);
+  if (F.state.max < catBounds.max) p.set("max", F.state.max);
+  if (F.state.score > 0) p.set("score", F.state.score);
+  const qs = p.toString();
+  history.replaceState(null, "", qs ? `category.html?${qs}` : "category.html");
+}
 
 async function catInit() {
   try {
@@ -307,6 +338,8 @@ async function catInit() {
     return;
   }
 
+  catBounds = F.bounds(catData);
+  filtersFromUrl();
   F.state.cat = catParam && CATS[catParam] ? catParam : null;
   const title = F.state.cat ? CATS[F.state.cat] : "Каталог";
   $("#catTitle").textContent = title;
@@ -358,7 +391,6 @@ function buildChips() {
       const t = F.state.cat ? CATS[F.state.cat] : "Каталог";
       $("#catTitle").textContent = t;
       document.title = `${t} — EazyTech`;
-      history.replaceState(null, "", F.state.cat ? `category.html?cat=${F.state.cat}` : "category.html");
       paint();
     });
   });
@@ -372,9 +404,10 @@ function paint() {
   page = Math.min(Math.max(1, page), pages);
   const slice = visible.slice((page - 1) * ps, page * ps);
 
-  // живая обратная связь: счётчик в фильтрах и на кнопке «применить»
+  // живая обратная связь: счётчик в фильтрах, на кнопке «применить» и в URL
   document.querySelectorAll("[data-num]").forEach((el) => (el.textContent = visible.length));
   document.querySelectorAll("[data-apply-n]").forEach((el) => (el.textContent = visible.length));
+  urlFromFilters();
 
   grid.querySelectorAll(".card").forEach((c, i) => {
     c.style.setProperty("--i", i % 2 ? "-1" : "1");
@@ -432,21 +465,20 @@ const cbSvg = '<svg width="10" height="10" viewBox="0 0 24 24"><path d="M4 12l5 
 
 function group(title, items, g) {
   if (!items.length) return "";
+  const key = g === "brand" ? "brands" : g;
   return `
     <div class="f-group open">
       <button class="f-head">${title} <i>+</i></button>
       <div class="f-body"><div><div class="f-pad">
         ${items.map(([v, l, n]) => `
-          <label class="cb"><input type="checkbox" data-g="${g}" value="${v}"><span class="box">${cbSvg}</span>${l}
+          <label class="cb"><input type="checkbox"${F.state[key].includes(v) ? " checked" : ""} data-g="${g}" value="${v}"><span class="box">${cbSvg}</span>${l}
             <span class="n">${n}</span></label>`).join("")}
       </div></div></div>
     </div>`;
 }
 
 function buildFilters(box) {
-  const b = F.bounds(catData);
-  F.state.min = b.min;
-  F.state.max = b.max;
+  const b = catBounds;
 
   const tally = (key, filter) => {
     const m = new Map();
@@ -474,21 +506,21 @@ function buildFilters(box) {
       <button class="f-head">Цена <i>+</i></button>
       <div class="f-body"><div><div class="f-pad">
         <div class="range-row"><label><span>от</span><b data-min></b></label>
-          <input type="range" data-r="min" min="${b.min}" max="${b.max}" value="${b.min}"></div>
+          <input type="range" data-r="min" min="${b.min}" max="${b.max}" value="${F.state.min}"></div>
         <div class="range-row"><label><span>до</span><b data-max></b></label>
-          <input type="range" data-r="max" min="${b.min}" max="${b.max}" value="${b.max}"></div>
+          <input type="range" data-r="max" min="${b.min}" max="${b.max}" value="${F.state.max}"></div>
       </div></div></div>
     </div>
     <div class="f-group open">
       <button class="f-head">Мин. балл <i>+</i></button>
       <div class="f-body"><div><div class="f-pad">
         <div class="range-row"><label><span>от</span><b data-score></b></label>
-          <input type="range" data-r="score" min="0" max="10000000" step="100000" value="0"></div>
+          <input type="range" data-r="score" min="0" max="10000000" step="100000" value="${F.state.score}"></div>
       </div></div></div>
     </div>
     <div class="f-group open">
       <div class="f-pad">
-        <label class="cb"><input type="checkbox" data-deal><span class="box">${cbSvg}</span>Только Fair Deal</label>
+        <label class="cb"><input type="checkbox"${F.state.deal ? " checked" : ""} data-deal><span class="box">${cbSvg}</span>Только Fair Deal</label>
       </div>
     </div>
     <p class="f-count">Показано <b data-num>${catData.length}</b> из ${catData.length}</p>
