@@ -306,8 +306,12 @@ async function homeInit() {
   const byCat = (c) => list.filter((d) => d.category === c);
 
   const tiles = $("#cats");
-  tiles.innerHTML = Object.entries(CATS).map(([key, name], i) => `
-    <a class="cat-tile${i === 0 ? " cat-tile--wide" : ""}" href="category.html?cat=${key}">
+  const catEntries = Object.entries(CATS);
+  // первая плитка — широкая; если категорий чётное число, последняя
+  // осталась бы сиротой в одной колонке — растягиваем и её
+  const isWide = (i) => i === 0 || (i === catEntries.length - 1 && catEntries.length % 2 === 0);
+  tiles.innerHTML = catEntries.map(([key, name], i) => `
+    <a class="cat-tile${isWide(i) ? " cat-tile--wide" : ""}" href="category.html?cat=${key}">
       <span class="n">0${i + 1} / ${name.toUpperCase()}</span>
       <h3>${name}</h3>
       <span class="cnt">${byCat(key).length} устройств</span>
