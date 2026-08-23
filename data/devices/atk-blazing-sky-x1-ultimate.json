@@ -20,7 +20,7 @@
     "personal": 9700000,
     "ai": 9600000
   },
-  "class": "premium",
+  "class": "balanced",
   "connection": "hybrid",
   "mechanism": "optical",
   "kolhoz": false,

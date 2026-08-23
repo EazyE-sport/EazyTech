@@ -25,7 +25,7 @@ function setTheme(t) {
   try { localStorage.setItem(THEME_KEY, t); } catch { /* приватный режим */ }
 }
 
-const CATS = { mice: "Мыши", keyboards: "Клавиатуры", headphones: "Наушники" };
+const CATS = { mice: "Мыши", keyboards: "Клавиатуры", headphones: "Наушники", mousepads: "Коврики", switches: "Свитчи", monitors: "Мониторы" };
 const CLASS_L = { budget: "Дешевка", value: "Топ за свои деньги", balanced: "Цена = качество", overpriced: "Оверпрайс" };
 const CONN_L = { wired: "Проводная", wireless: "Беспроводная", hybrid: "Комбинированная" };
 const MECH_L = { mechanical: "Механика", magnetic: "Магнитка", optical: "Оптическая", membrane: "Мембрана", dynamic: "Динамические" };
@@ -306,8 +306,12 @@ async function homeInit() {
   const byCat = (c) => list.filter((d) => d.category === c);
 
   const tiles = $("#cats");
-  tiles.innerHTML = Object.entries(CATS).map(([key, name], i) => `
-    <a class="cat-tile${i === 0 ? " cat-tile--wide" : ""}" href="category.html?cat=${key}">
+  const catEntries = Object.entries(CATS);
+  // первая плитка — широкая; если категорий чётное число, последняя
+  // осталась бы сиротой в одной колонке — растягиваем и её
+  const isWide = (i) => i === 0 || (i === catEntries.length - 1 && catEntries.length % 2 === 0);
+  tiles.innerHTML = catEntries.map(([key, name], i) => `
+    <a class="cat-tile${isWide(i) ? " cat-tile--wide" : ""}" href="category.html?cat=${key}">
       <span class="n">0${i + 1} / ${name.toUpperCase()}</span>
       <h3>${name}</h3>
       <span class="cnt">${byCat(key).length} устройств</span>
@@ -639,7 +643,7 @@ function buildFilters(box) {
   const brandItems = tally("brand").map(([v, n]) => [v, v, n]);
   const clsItems = tally("class").map(([v, n]) => [v, CLASS_L[v] || v, n]);
   const connItems = tally("connection").map(([v, n]) => [v, CONN_L[v] || v, n]);
-  const mechItems = tally("mechanism", (d) => d.category === "keyboards")
+  const mechItems = tally("mechanism", (d) => d.category === "keyboards" || d.category === "switches")
     .map(([v, n]) => [v, MECH_L[v] || v, n]);
 
   box.innerHTML = `

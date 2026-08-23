@@ -1,4 +1,14 @@
 @media (max-width: 1024px) {
+  /* пунктов в меню стало больше (коврики, свитчи, мониторы) —
+     на средних экранах ссылки не влезают, уходим в бургер раньше */
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
   .cat-layout {
     grid-template-columns: 1fr;
   }

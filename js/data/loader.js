@@ -51,9 +51,23 @@ export function strip(text) {
 
 // на github.io листинга папки нет, поэтому список файлов берём из API
 // репозитория; манифест остаётся фолбэком для локального хостинга.
+// ВАЖНО: API по умолчанию читает ветку main, а Pages может деплоиться
+// с другой ветки — поэтому списки из API и манифеста ОБЪЕДИНЯЕМ:
+// файлы, которых нет на хостинге, просто отвалятся 404-ом и выпадут.
 // ?t= и no-store обязательны: Pages отдаёт статику с кешем 10 минут,
 // без них новые файлы устройств видны не сразу
 async function fileList() {
+  const names = new Set();
+
+  // 1) манифест — источник правды той ветки, с которой задеплоен сайт
+  try {
+    const idx = await (await fetch(`${MANIFEST}?t=${Date.now()}`, { cache: "no-store" })).json();
+    (Array.isArray(idx) ? idx : []).forEach((n) => names.add(n));
+  } catch {
+    /* манифест не доехал — надежда на API */
+  }
+
+  // 2) API — подхватывает файлы, добавленные в репо мимо манифеста
   const host = location.hostname;
   if (host.endsWith(".github.io")) {
     const owner = host.split(".")[0];
@@ -66,18 +80,18 @@ async function fileList() {
         );
         if (r.ok) {
           const list = await r.json();
-          const names = (Array.isArray(list) ? list : [])
+          (Array.isArray(list) ? list : [])
             .map((f) => f.name)
-            .filter((n) => n.endsWith(".json") && !SKIP.includes(n));
-          if (names.length) return names;
+            .filter((n) => n.endsWith(".json"))
+            .forEach((n) => names.add(n));
         }
       } catch {
-        /* API недоступен — ниже манифест */
+        /* API недоступен — хватит манифеста */
       }
     }
   }
-  const idx = await (await fetch(`${MANIFEST}?t=${Date.now()}`, { cache: "no-store" })).json();
-  return idx.filter((n) => !SKIP.includes(n));
+
+  return [...names].filter((n) => !SKIP.includes(n));
 }
 
 async function pull() {
@@ -88,7 +102,17 @@ async function pull() {
       return JSON.parse(strip(await r.text()));
     })),
   );
-  return res.filter((r) => r.status === "fulfilled").map((r) => r.value);
+  const seen = new Set();
+  return res
+    .filter((r) => r.status === "fulfilled")
+    .map((r) => r.value)
+    .filter((d) => {
+      // один девайс мог приехать под старым и новым именем файла —
+      // оставляем первый экземпляр по id
+      if (!d || !d.id || seen.has(d.id)) return false;
+      seen.add(d.id);
+      return true;
+    });
 }
 
 export async function all() {
