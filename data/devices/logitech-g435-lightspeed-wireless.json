@@ -22,7 +22,7 @@
   },
   "class": "budget",
   "connection": "hybrid",
-  "mechanism": "wireless",
+  "mechanism": "dynamic",
   "kolhoz": false,
   "reviews": [
     {

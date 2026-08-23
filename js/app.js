@@ -25,7 +25,7 @@ function setTheme(t) {
   try { localStorage.setItem(THEME_KEY, t); } catch { /* приватный режим */ }
 }
 
-const CATS = { mice: "Мыши", keyboards: "Клавиатуры", headphones: "Наушники" };
+const CATS = { mice: "Мыши", keyboards: "Клавиатуры", headphones: "Наушники", mousepads: "Коврики", switches: "Свитчи", monitors: "Мониторы" };
 const CLASS_L = { budget: "Дешевка", value: "Топ за свои деньги", balanced: "Цена = качество", overpriced: "Оверпрайс" };
 const CONN_L = { wired: "Проводная", wireless: "Беспроводная", hybrid: "Комбинированная" };
 const MECH_L = { mechanical: "Механика", magnetic: "Магнитка", optical: "Оптическая", membrane: "Мембрана", dynamic: "Динамические" };
@@ -639,7 +639,7 @@ function buildFilters(box) {
   const brandItems = tally("brand").map(([v, n]) => [v, v, n]);
   const clsItems = tally("class").map(([v, n]) => [v, CLASS_L[v] || v, n]);
   const connItems = tally("connection").map(([v, n]) => [v, CONN_L[v] || v, n]);
-  const mechItems = tally("mechanism", (d) => d.category === "keyboards")
+  const mechItems = tally("mechanism", (d) => d.category === "keyboards" || d.category === "switches")
     .map(([v, n]) => [v, MECH_L[v] || v, n]);
 
   box.innerHTML = `
