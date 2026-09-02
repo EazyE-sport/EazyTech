@@ -3,7 +3,9 @@
   "name": "Akko V3 Cream Yellow Pro (45 шт)",
   "brand": "Akko",
   "category": "switches",
-  "images": [https://akkogear.eu/cdn/shop/files/V3CreamYellowProSwitch_2.png?v=1682579503&width=2048],
+  "images": ["https://akkogear.eu/cdn/shop/files/V3CreamYellowProSwitch_2.png?v=1682579503&width=2048",
+  "https://akkogear.eu/cdn/shop/files/V3CreamYellowProSwitch_9.png?v=1742887837&width=1500"
+  ],
   "short": "Самый дешёвый билет в мир нормальных линейников: 45 штук по цене пиццы.",
   "description": "Cream Yellow Pro — свич, с которого начинается почти каждый первый кастом. Линейный, с лёгкой заводской смазкой, длинной пружиной 22 мм и удивительно приличным звуком для своего ценника.\n\nЭто не Oil King: смазка местами неровная, попадаются экземпляры с лёгким скрипом, и в партии из 45 штук парочку можно смело откладывать в запас. Но по соотношению цена/ощущения конкурентов у них просто нет.",
   "price": 449,
